@@ -7,9 +7,7 @@
 <style type="text/css">
   #map {
     width: 100%;
-    margin-left: auto ;
-    margin-right: auto ;
-    text-align: justify;
+    text-align: center;
   }
   #home {
         font-family: sans-serif;
@@ -42,7 +40,7 @@ if (document.compatMode=='CSS1Compat' &&
     document.documentElement.offsetWidth ) {
  winW = document.documentElement.offsetWidth;
 }
-if (window.innerWidth && window.innerHeight) {
+if (window.innerWidth) {
  winW = window.innerWidth;
 }
 document.writeln("<iframe src=\"http://www.google.com/latitude/apps/badge/api?user=565182223827202477&type=iframe&maptype=roadmap&z=7\" width=" + winW + " height=" + winH +" frameborder=\"0\"></iframe> <!-- To disable location sharing, you *must* visit https://www.google.com/latitude/apps/badge and disable the Google Public Location badge. Removing this code snippet is not enough! -->")
