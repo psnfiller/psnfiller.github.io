@@ -31,9 +31,12 @@
 
 <div id="map">
 <script language="JavaScript">
-var winW = 630, winH = 560;
+var winW = 630, winH = 260;
 if (document.body && document.body.offsetWidth) {
  winW = document.body.offsetWidth;
+}
+if (winW > 1000) {
+  winW = 1000;
 }
 document.writeln("<iframe src=\"http://www.google.com/latitude/apps/badge/api?user=565182223827202477&type=iframe&maptype=roadmap&z=7\" width=" + winW + " height=" + winH +" frameborder=\"0\"></iframe> <!-- To disable location sharing, you *must* visit https://www.google.com/latitude/apps/badge and disable the Google Public Location badge. Removing this code snippet is not enough! -->")
 </script>
