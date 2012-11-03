@@ -1,5 +1,4 @@
 url: http://nuttall.im/chile/
 baseurl: /chile/
 destination: '/home/psn/html/chile/'
-permalink: /:title.html
-url_root: /chile
+permalink: /chile/:title.html
