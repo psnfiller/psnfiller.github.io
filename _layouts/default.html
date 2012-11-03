@@ -34,6 +34,20 @@
 <div id="map">
 <script language="JavaScript">
 var winW = 630, winH = 460;
+if (document.body && document.body.offsetWidth) {
+ winW = document.body.offsetWidth;
+ winH = document.body.offsetHeight;
+}
+if (document.compatMode=='CSS1Compat' &&
+    document.documentElement &&
+    document.documentElement.offsetWidth ) {
+ winW = document.documentElement.offsetWidth;
+ winH = document.documentElement.offsetHeight;
+}
+if (window.innerWidth && window.innerHeight) {
+ winW = window.innerWidth;
+ winH = window.innerHeight;
+}
 document.writeln("<iframe src=\"http://www.google.com/latitude/apps/badge/api?user=565182223827202477&type=iframe&maptype=roadmap&z=7\" width=" + winW + " height=" + winH +" frameborder=\"0\"></iframe> <!-- To disable location sharing, you *must* visit https://www.google.com/latitude/apps/badge and disable the Google Public Location badge. Removing this code snippet is not enough! -->")
 </script>
 </div>
