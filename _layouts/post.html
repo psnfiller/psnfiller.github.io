@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>laura says hi - from chile</title>
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link rel="alternate" type="application/atom+xml" href="atom.xml" title="Atom feed">
+<style type="text/css">
+  #map {
+    width: 100%;
+    text-align: center;
+  }
+  #home {
+        font-family: sans-serif;
+        text-align: justify;
+        max-width: 55em;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fbfbfc;
+      }
+
+      h1, h2 {
+        font-family: 'Droid Sans', arial, serif;
+        font-weight: normal;
+        text-align: center;
+      }
+</style>
+</head>
+<body>
+
+
+
+<div id="map">
+<script language="JavaScript">
+var winW = 630, winH = 260;
+if (document.body && document.body.offsetWidth) {
+ winW = document.body.offsetWidth;
+}
+if (winW > 1000) {
+  winW = 1000;
+}
+document.writeln("<iframe src=\"http://www.google.com/latitude/apps/badge/api?user=565182223827202477&type=iframe&maptype=roadmap&z=7\" width=" + winW + " height=" + winH +" frameborder=\"0\"></iframe> <!-- To disable location sharing, you *must* visit https://www.google.com/latitude/apps/badge and disable the Google Public Location badge. Removing this code snippet is not enough! -->")
+</script>
+</div>
+<h1>Laura and Pete's travel Blog</h1>
+
+{{ content }}
+
+</body>
+</html>
