@@ -4,7 +4,7 @@ title: Chile!
 ---
 <div id="home">
 {% for post in site.posts %}
-  <h2><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <h2><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/chile/{{ post.url }}">{{ post.title }}</a></h2>
   <p>{{ post.content }}</p>
 
 {% endfor %}
