@@ -1,2 +1,2 @@
 destination: '/home/psn/html/chile/'
-permalink: /chile/:title.html
+permalink: /:title.html
