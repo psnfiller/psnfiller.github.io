@@ -1,1 +1,3 @@
-url: 'http://nuttall.im/chile/'
+#url: 'http://nuttall.im/'
+destination: '/home/psn/html/chile/'
+permalink: title.html
