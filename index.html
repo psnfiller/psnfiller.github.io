@@ -6,6 +6,7 @@ title: Chile!
 {% for post in site.posts %}
   <h2><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/chile{{ post.url }}">{{ post.title }}</a></h2>
   <p>{{ post.content }}</p>
+  <p> <a href="/chile{{ post.url }}#disqus_thread">comment<a></p>
 
 {% endfor %}
 </div>
