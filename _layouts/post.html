@@ -10,7 +10,7 @@
 <body>
 
 <h1>Laura and Pete's travel blog</h1>
-  <h2><span>{{ post.date | date_to_string }}</span> &raquo; <a href="/chile{{ post.url }}">{{ post.title }}</a></h2>
+  <h2><span>{{ page.date | date_to_string }}</span> &raquo; <a href="/chile{{ page.url }}">{{ post.title }}</a></h2>
 <div id="home">
 
 {{ content }}
