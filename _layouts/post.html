@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<h1>Laura and Pete's travel blog</h1>
+  <h2><span>{{ date | date_to_string }}</span> &raquo; <a href="/chile{{ url }}">{{ title }}</a></h2>
 <div id="home">
 
 {{ content }}
