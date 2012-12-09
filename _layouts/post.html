@@ -9,7 +9,13 @@
 </head>
 <body>
 
-  <h2><span>{{ page.date | date_to_string }}</span> &raquo; <a href="/chile{{ page.url }}">{{ page.title }}</a></h2>
+  <h2><span>
+      {% if page.date %)
+
+      {{ page.date | date_to_string }}
+      {% endif %}
+
+  </span> &raquo; <a href="/chile{{ page.url }}">{{ page.title }}</a></h2>
 <div id="home">
 
 {{ content }}
