@@ -13,6 +13,8 @@
       {% if page.date %}
 
       {{ page.date | date_to_string }}
+      {% else %}
+        Date goes here
       {% endif %}
 
   </span> &raquo; <a href="/chile{{ page.url }}">{{ page.title }}</a></h2>
