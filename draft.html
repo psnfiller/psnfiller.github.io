@@ -26,12 +26,10 @@ idiots with this, which isn't mentioned on their site.</p>
 
 <h2>how secure is this?</h2>
 
-<p>
-First idea - they only have a few questions. I think each question takes a human
-to come up with it and review it. Guesses as to why - you can't really raise civil
-rights awareness with a incorrect collection of ills, don't want to be sued for
-libel.
-</p>
+<p> First idea - they only have a few questions. I think each question
+takes a human to come up with it and review it.They can't really raise
+civil rights awareness with a incorrect collection of ills and they
+don't want to be sued for libel.  </p>
 
 <p>
 Download the page 1000 times.
@@ -52,7 +50,7 @@ for x in dataset/*; do
 done | sort | uniq > questions
 </pre>
 <p>
-They have given me 8 questions. Theories as to why:
+They have given 8 questions. Theories as to why:
 </p>
 
 
@@ -67,6 +65,8 @@ They have given me 8 questions. Theories as to why:
 They might also have many correct answers per question. With a normal captcha you
 only have one correct answer.
 </p>
+
+
 <p>
 How many answers are there? Use chrome to grab a image url. Use curl to hit that
 url a few times. Each file has a different sha1sum (it would be nice to have a
