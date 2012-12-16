@@ -1,0 +1,198 @@
+---
+layout: post
+title: Civil rights Captcha
+---
+
+<h2>background</h2>
+
+<p>
+Civil rights captcha is a system that aims to educate people on civil rights as
+well as tell humans from robots.
+</p>
+
+<ul>
+  <li><a href="http://captcha.civilrightsdefenders.org/">The site.</a></li>
+  <li><a href="http://www.wired.com/threatlevel/2012/10/empathy-captcha/">Wired article</a></li>
+  <li><a href="http://news.ycombinator.com/item?id=4619248">Hacker news thread</a>
+</ul>
+
+<p>Note that wired and therefore hacker news talk about filtering out internet
+asshats with this, which isn't mentioned on their site.</p>
+
+
+<h2>how secure is this?</h2>
+
+<p>
+first idea - they only have a few questions. I think each question takes a human
+to come up with it and review. Guesses as to why - you can't really raise civil
+rights awareness with a incorrect collection of ills, don't want to be sued for
+libel.
+</p>
+
+<p>
+Download the page 1000 times
+</p>
+<pre>
+for x in {0..1000}; do
+  curl -s -o dataset/$x captcha.civilrightsdefenders.org
+  done
+</pre>
+<p>
+and compare them to one another.
+</p>
+
+<pre>
+for x in dataset/*; do
+  diff dataset/0 $x | egrep '>'
+done | sort | uniq > questions
+</pre>
+<p>
+they have given me 8 questions. theories as to why:
+</p>
+<ul>
+  <li>they only have 8 questions.</li>
+  <li>they shard questions by IP or user agent (only give curl users 8 questions, beat the smartasses on the internet) or any thing else really.</li>
+</ul>
+
+ <p>
+They might also have many correct answers per question. With a normal capcha you
+only have one correct answer.
+</p>
+<p>
+How many answers are there? use chrome to grab a image url. use curl to hit that
+url a few times. Each file has a different sha1sum*, so possibly a bug in the
+loop or a different image. Download 1000 images.
+</p>
+
+<pre>
+mkdir images
+for x in {0..10000}; do
+  curl -s -o images/$x 'http://captcha.civilrightsdefenders.org/captchaAPI/securimage_show.php?sid=xJZNm2G1mK5TQQH69mX3&newset=7&lang=en';
+done
+</pre>
+
+<p>
+hash all the images, see 1003 different hashes. ideas:
+<ul>
+  <li>different words</li>
+  <li>different lines over each word.</li>
+  <li>some sort of salting in the image to defeat hashing</li>
+  <li>bug in the loop.</li>
+</ul>
+</p>
+
+ <p>
+look at the images. lots of different words, some negative, some positive. Some
+dupe words, but not many. Download 6k images. all of them are different.
+</p>
+
+ <p>
+
+Peer at chrome's debugger. Watch the process. The fetches one image with
+newset=1, and two more without the newset parameter. Each request has
+a sid parameter set to a random string. The random string is different
+for each image. The newset request sets a cookie, which is sent back to
+the server. Example cookie:
+
+</p>
+
+<pre>
+Set-Cookie: PHPSESSID=eq0llt1rjtfr0h3fa0mlorrm67; path=/
+</pre>
+
+ <p>
+random string notes: its not clear what purpose the random string serves. If I
+had to guess, its to prevent internet caching.
+</p>
+
+ <p>
+Once the user enters a answer, it does validation with a request like so.
+</p>
+
+<pre>
+curl --cookie 'PHPSESSID=e66bfeidg9ukm1ovvk9cn1i8f6'
+'http://captcha.civilrightsdefenders.org/captchaAPI/?callback=jQuery1&code=concerned'
+</pre>
+
+
+result:
+
+<pre>
+jQuery1({"answer":"false"});
+</pre>
+
+ <p>
+So it presumably stores a map of session to correct answer on the server side,
+and returns a json blob if the user's input is correct.
+</p>
+
+<p>Code for a session</p>
+
+<pre>
+set -eux
+session_id=$RANDOM
+dir=session-$session_id
+mkdir $dir
+random=$(printf "%06daaaaaaaaaaaaaa" $session_id)
+curl -s -o $dir/1.png --dump-header $dir/1.headers
+"http://captcha.civilrightsdefenders.org/captchaAPI/securimage_show.php?sid=${random}&newset=1&lang
+
+cookie=$(awk '/Set-Cookie:/{print $2}' session/1.headers | tr -d ';')
+awk '/Set-Cookie:/{print $2}' $dir/1.headers
+curl --cookie "$cookie" -s -o $dir/2.png --dump-header $dir/2.headers "http://captcha.civilrightsdefenders.org/captchaAPI/securimage_show.php?sid=${ra
+curl --cookie "$cookie" -s -o $dir/3.png --dump-header $dir/3.headers "http://captcha.civilrightsdefenders.org/captchaAPI/securimage_show.php?sid=${ra
+
+echo $dir
+echo 'work out the answer'
+read answer
+
+curl -s --dump-header $dir/answer.headers --cookie "$cookie" "http://captcha.civilrightsdefenders.org/captchaAPI/?callback=jQuery1&code=${answer}"
+</pre>
+
+<h3>Can this be brute forced?</h3>
+
+ <p>
+Start out by sending the contents of /usr/share/dict/british-english
+</p>
+
+<pre>
+% wc -l /usr/share/dict/british-english
+99156 /usr/share/dict/british-english
+</pre>
+
+ <p>
+It takes 30s to test 100 words. So to test british-english would take 8 hours.
+New plan: find a list of words for emotions on the internet. <a
+  href="http://www.derose.net/steve/resources/emotionwords/ewordsRanked.txt">like so</a>.
+</p>
+<ol>
+  <li>~700 words, so under 5m to test them all. Doesn't work.</li>
+  <li>How about solving the captcha, verifying it, then sending 10 verify requests for random words, then trying to verify the correct answer  again?  fails.</li>
+  <li>How about trying a random word, then trying the correct answer?
+  fails.</li>
+  <li>How about trying the correct answer twice? works both times.</li>
+ </ol>
+
+ <p>
+Even though the keyspace is quite small, O(100)s of words, brute forcing is hard
+because any false answer drops the session.
+</p>
+
+ <p>
+ <h2>conclusion</h2>
+This is most robust than I expected. a lot of the attacks I
+expected to work don't work. There are fairly few questions, but the questions
+don't matter. there are O(100s) of text answers, but its generating a new image
+for each request, meaning that there isn't any point in solving the images
+offline (or spending time trying to use their site as a oracle for the images).
+It reduces down to the normal image capcha problem - OCRing images online. Its
+also probably vunerable to dos attacks on opening many sessions.
+</p>
+
+<p>Post-scipt: actually reading their docs shows that its based on <a
+  href="http://www.phpcaptcha.org/">php captcha</a>.</p>
+</body>
+</html>
+
+
+
