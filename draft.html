@@ -3,7 +3,11 @@ layout: post
 title: Civil rights Captcha
 ---
 
-<h2>background</h2>
+<p><b>Warning - nerdy content</b>I spent a lazy afternoon back in Dublin
+pulling apart Civil rights captcha, and I wanted to save my notes by
+sticking them on the blog.  </p>
+
+<h2>Background</h2>
 
 <p>
 Civil rights captcha is a system that aims to educate people on civil rights as
@@ -17,28 +21,29 @@ well as tell humans from robots.
 </ul>
 
 <p>Note that wired and therefore hacker news talk about filtering out internet
-asshats with this, which isn't mentioned on their site.</p>
+idiots with this, which isn't mentioned on their site.</p>
 
 
 <h2>how secure is this?</h2>
 
 <p>
-first idea - they only have a few questions. I think each question takes a human
-to come up with it and review. Guesses as to why - you can't really raise civil
+First idea - they only have a few questions. I think each question takes a human
+to come up with it and review it. Guesses as to why - you can't really raise civil
 rights awareness with a incorrect collection of ills, don't want to be sued for
 libel.
 </p>
 
 <p>
-Download the page 1000 times
+Download the page 1000 times.
 </p>
 <pre>
 for x in {0..1000}; do
   curl -s -o dataset/$x captcha.civilrightsdefenders.org
   done
 </pre>
+
 <p>
-and compare them to one another.
+Compare them to one another.
 </p>
 
 <pre>
@@ -47,20 +52,25 @@ for x in dataset/*; do
 done | sort | uniq > questions
 </pre>
 <p>
-they have given me 8 questions. theories as to why:
+They have given me 8 questions. Theories as to why:
 </p>
+
+
 <ul>
   <li>they only have 8 questions.</li>
-  <li>they shard questions by IP or user agent (only give curl users 8 questions, beat the smartasses on the internet) or any thing else really.</li>
+
+  <li>they shard questions by IP or user agent. For example, they might
+  only give curl users 8 questions.</li>
 </ul>
 
  <p>
-They might also have many correct answers per question. With a normal capcha you
+They might also have many correct answers per question. With a normal captcha you
 only have one correct answer.
 </p>
 <p>
-How many answers are there? use chrome to grab a image url. use curl to hit that
-url a few times. Each file has a different sha1sum*, so possibly a bug in the
+How many answers are there? Use chrome to grab a image url. Use curl to hit that
+url a few times. Each file has a different sha1sum (it would be nice to have a
+command line tool that uses a cheaper hash), so possibly a bug in the
 loop or a different image. Download 1000 images.
 </p>
 
@@ -72,7 +82,7 @@ done
 </pre>
 
 <p>
-hash all the images, see 1003 different hashes. ideas:
+hash all the images, see 1003 different hashes. Ideas:
 <ul>
   <li>different words</li>
   <li>different lines over each word.</li>
@@ -82,13 +92,13 @@ hash all the images, see 1003 different hashes. ideas:
 </p>
 
  <p>
-look at the images. lots of different words, some negative, some positive. Some
-dupe words, but not many. Download 6k images. all of them are different.
+look at the images. Lots of different words, some negative, some positive. Some
+dupe words, but not many. Download 6k images. All of them are different.
 </p>
 
  <p>
 
-Peer at chrome's debugger. Watch the process. The fetches one image with
+Peer at chrome's debugger. Watch the process. The javascript fetches one image with
 newset=1, and two more without the newset parameter. Each request has
 a sid parameter set to a random string. The random string is different
 for each image. The newset request sets a cookie, which is sent back to
@@ -102,7 +112,7 @@ Set-Cookie: PHPSESSID=eq0llt1rjtfr0h3fa0mlorrm67; path=/
 
  <p>
 random string notes: its not clear what purpose the random string serves. If I
-had to guess, its to prevent internet caching.
+had to guess, it prevents http caching.
 </p>
 
  <p>
@@ -161,38 +171,42 @@ Start out by sending the contents of /usr/share/dict/british-english
 </pre>
 
  <p>
-It takes 30s to test 100 words. So to test british-english would take 8 hours.
-New plan: find a list of words for emotions on the internet. <a
-  href="http://www.derose.net/steve/resources/emotionwords/ewordsRanked.txt">like so</a>.
+It takes 30s to test 100 words. So to test british-english would take
+8 hours.  New plan: find a list of words for emotions on the internet. <a
+  href="http://www.derose.net/steve/resources/emotionwords/ewordsRanked.txt">like
+  so</a>.
 </p>
+
 <ol>
   <li>~700 words, so under 5m to test them all. Doesn't work.</li>
-  <li>How about solving the captcha, verifying it, then sending 10 verify requests for random words, then trying to verify the correct answer  again?  fails.</li>
+
+
+  <li>How about solving the captcha, verifying it, then sending 10
+  verify requests for random words, then trying to verify the correct
+  answer again? Fails.</li>
+
   <li>How about trying a random word, then trying the correct answer?
-  fails.</li>
-  <li>How about trying the correct answer twice? works both times.</li>
+  Fails.</li>
+
+  <li>How about trying the correct answer twice? Works both times.</li>
  </ol>
 
  <p>
-Even though the keyspace is quite small, O(100)s of words, brute forcing is hard
-because any false answer drops the session.
-</p>
+Even though the key space is quite small, O(100)s of words, brute forcing
+is hard because any false answer drops the session.  </p>
 
- <p>
- <h2>conclusion</h2>
-This is most robust than I expected. a lot of the attacks I
-expected to work don't work. There are fairly few questions, but the questions
-don't matter. there are O(100s) of text answers, but its generating a new image
-for each request, meaning that there isn't any point in solving the images
-offline (or spending time trying to use their site as a oracle for the images).
-It reduces down to the normal image capcha problem - OCRing images online. Its
-also probably vunerable to dos attacks on opening many sessions.
-</p>
-
-<p>Post-scipt: actually reading their docs shows that its based on <a
-  href="http://www.phpcaptcha.org/">php captcha</a>.</p>
-</body>
-</html>
+ <h2>conclusion</h2> <p>
 
 
+This is more robust than I expected. A lot of the attacks I expected
+to work don't work. There are fairly few questions, but the questions
+don't matter. There are O(100s) of text answers, but its generating a new
+image for each request, meaning that there isn't any point in solving the
+images offline (or spending time trying to use their site as a oracle
+for the images).  It reduces down to the normal image captcha problem -
+OCRing images online. Its also probably vulnerable to dos attacks on
+opening many sessions.  </p>
+
+<p>Post-script: actually reading their docs shows that its based on <a
+href="http://www.phpcaptcha.org/">php captcha</a>.</p>
 
