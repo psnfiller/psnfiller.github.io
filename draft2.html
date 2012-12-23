@@ -1,0 +1,41 @@
+---
+layout: post
+title: Nerd updates
+---
+
+<p> <b>Nerdy content</b> I made a few changes to the blog. I have moved
+  the URL to <a href="www.nuttall.im">www.nuttall.im</a>, rather than
+  http://nuttall.im/chile/. There
+was  not anything interesting on / anyway. I should have got mod_rewrite
+  to do the correct rewriting, but if a url is broken for you - or
+something is broken for you - let me know at psn _at_ nuttall.im.  </p>
+
+<p>I've moved to SSL and <a
+  href="http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">STS</a>.
+    The long term goal for ssl is either to set up <a
+    href="http://antony.lesuisse.org/software/ajaxterm/">ajaxterm</a>
+  or similar, or to play around with <a
+  href="http://www.chromium.org/spdy">spdy.</a> I would like ajaxterm
+as a backup for putty in internet cafes, and I want to play around with
+spdy anyway. STS protects against <a
+    href="http://www.thoughtcrime.org/software/sslstrip/">sslstrip</a>,
+        and also does a better job
+at flushing out mixed content warnings.  </p>
+
+<p><a href="http://www.imperialviolet.org/2012/07/19/hope9talk.html">Adam
+Langley's blog</a> is pretty good at explaining what to do. I got the
+certs off <a href="http://www.startssl.com/">startssl</a> - who were
+  puzzled by an Argentinian IP and Dublin
+address and wanted to ask more questions. They were convinced
+by a Google maps photo of the roof of my block of flats. <a
+href="http://en.wikipedia.org/wiki/The_Trouble_with_Trillions">Ob
+Simpson's reference.</a> I also screwed up serving the certs with Apache
+- and didn't send the full chain. This broke Firefox, but not chrome. Problem
+    found by my Dad and reproduced with <a href="https://www.ssllabs.com/ssltest/analyze.html?d=nuttall.im">ssllabs test thingo.</a></p>
+
+<p>I have found one problem with ssl - <a
+href="http://disqus.com/">disqus</a>
+broke. It fetched a resource over http. The Google suggested turning
+off their 2012 update. It seems to work after that.</p>h
+
+
