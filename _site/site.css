@@ -1,0 +1,35 @@
+
+  #map {
+    width: 100%;
+    text-align: center;
+  }
+  #photo {
+    text-align: center;
+    font-family: sans-serif;
+    max-width: 55em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fbfbfc;
+  }
+  #home {
+        font-family: sans-serif;
+        text-align: justify;
+        max-width: 55em;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #fbfbfc;
+      }
+
+  h3 {
+        font-family: 'Droid Sans', arial, serif;
+        font-weight: normal;
+  }
+  h1, h2 {
+        font-family: 'Droid Sans', arial, serif;
+        font-weight: normal;
+        text-align: center;
+  }
+  .quote{
+    font-family:monospace, 'Droid Sans';
+    font-size: small;
+  }

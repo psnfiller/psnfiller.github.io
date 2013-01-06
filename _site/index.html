@@ -1,0 +1,1884 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>laura says hi - from chile</title>
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link rel="alternate" type="application/atom+xml" href="atom.xml" title="Atom feed">
+<link href='site.css' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+
+
+<div id="map">
+<script language="JavaScript">
+var winW = 630, winH = 260;
+if (document.body && document.body.offsetWidth) {
+ winW = document.body.offsetWidth;
+}
+if (winW > 1000) {
+  winW = 1000;
+}
+document.writeln("<iframe src=\"https://www.google.com/latitude/apps/badge/api?user=565182223827202477&type=iframe&maptype=roadmap&z=7\" width=" + winW + " height=" + winH +" frameborder=\"0\"></iframe> <!-- To disable location sharing, you *must* visit https://www.google.com/latitude/apps/badge and disable the Google Public Location badge. Removing this code snippet is not enough! -->")
+</script>
+</div>
+<h1>Laura and Pete's Travel blog</h1>
+
+<div id="home">
+
+  <h2><span>26 Dec 2012</span> &raquo; <a href="/birds-of-arica.html">Birds of Arica</a></h2>
+  <p><p> After a relaxing Christmas swimming and body boarding, we are heading
+south at last. Next stop Temuco - we get there on the 28th. We have had enough
+of deserts and high altitudes and its time to start walking. Somewhat
+better news is that we have <a
+    href="https://picasaweb.google.com/102479403334301156799/BirdsOfArica?authuser=0&feat=directlink">photos
+      from Arica</a> on the web. A selection is below. For Christmas dinner
+    we had a barbecue - it was remarkably tasty.
+
+</p>
+
+<div id="photo">
+  <a href="https://picasaweb.google.com/lh/photo/J8hYMt8HYFHcZoo6XlrTFNMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img
+    src="https://lh6.googleusercontent.com/-vOOB8nAORRQ/UNkPMXLjLQI/AAAAAAAAJtI/0NTzSHSjXrY/s400/P1050726.JPG"
+    height="300" width="400" /></a>
+  <a href="https://picasaweb.google.com/lh/photo/5CDPcFZWFgO3aLlBrScv2NMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-iyAj6og1lK8/UNkLGLCelbI/AAAAAAAAJpk/bS140AZGXng/s400/P1020463.JPG"
+    height="300" width="400" /></a>
+  <a href="https://picasaweb.google.com/lh/photo/c0gpsKG1Db-653eCgB1n_tMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img
+    src="https://lh6.googleusercontent.com/-p9Ugp6IRCLM/UNkN69lRzcI/AAAAAAAAJsQ/DM4dSi6zm3s/s400/P1020642.JPG"
+    height="300" width="400" /></a>
+  <a href="https://picasaweb.google.com/lh/photo/YA3g8TryHkKUayKT0k4WCtMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img
+    src="https://lh5.googleusercontent.com/-lK276RLYD1A/UNkMNf3iBgI/AAAAAAAAJqM/Xetu7V_H-ug/s400/P1020761.JPG"
+    height="300" width="400" /></a>
+  </div>
+
+</p>
+  <p> <a href="/birds-of-arica.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>24 Dec 2012</span> &raquo; <a href="/christmas-eve.html">Christmas eve</a></h2>
+  <p><p>
+We are still in Arica, and will be here until the 26th. We've been out to swim
+in the sea and watch the local wildlife - one of these is not a normal Christmas
+activity. The plan for tomorrow is more of the same, with a barbecue for
+Christmas dinner.
+
+  </p>
+</p>
+  <p> <a href="/christmas-eve.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>23 Dec 2012</span> &raquo; <a href="/ssl.html">Nerd updates</a></h2>
+  <p><p> <b>Nerdy content</b> I made a few changes to the blog. I have moved
+  the URL to <a href="www.nuttall.im">www.nuttall.im</a>, rather than
+  http://nuttall.im/chile/. There
+was  not anything interesting on / anyway. I should have got mod_rewrite
+  to do the correct rewriting, but if a url is broken for you - or
+something is broken for you - let me know at psn _at_ nuttall.im.  </p>
+
+<p>I've moved to SSL and <a
+  href="http://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">STS</a>.
+    The long term goal for ssl is either to set up <a
+    href="http://antony.lesuisse.org/software/ajaxterm/">ajaxterm</a>
+  or similar, or to play around with <a
+  href="http://www.chromium.org/spdy">spdy.</a> I would like ajaxterm
+as a backup for putty in internet cafes, and I want to play around with
+spdy anyway. STS protects against <a
+    href="http://www.thoughtcrime.org/software/sslstrip/">sslstrip</a>,
+        and also does a better job
+at flushing out mixed content warnings.  </p>
+
+<p><a href="http://www.imperialviolet.org/2012/07/19/hope9talk.html">Adam
+Langley's blog</a> is pretty good at explaining what to do. I got the
+certs off <a href="http://www.startssl.com/">startssl</a> - who were
+  puzzled by an Argentinian IP and Dublin
+address and wanted to ask more questions. They were convinced
+by a Google maps photo of the roof of my block of flats. <a
+href="http://en.wikipedia.org/wiki/The_Trouble_with_Trillions">Ob
+Simpson's reference.</a> I also screwed up serving the certs with Apache
+- and didn't send the full chain. This broke Firefox, but not chrome. Problem
+    found by my Dad and reproduced with <a href="https://www.ssllabs.com/ssltest/analyze.html?d=nuttall.im">ssllabs test thingo.</a></p>
+
+<p>I have found one problem with ssl - <a
+href="http://disqus.com/">disqus</a>
+broke. It fetched a resource over http. The Google suggested turning
+off their 2012 update. It seems to work after that.</p>
+
+<p>I added the www subdomain so I could scope cookies to www.nuttall.im, not
+  nuttall.im. I'm not doing much with cookies, so I might change that back.</p>
+
+
+</p>
+  <p> <a href="/ssl.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>23 Dec 2012</span> &raquo; <a href="/arcia.html">Arica</a></h2>
+  <p><p>Some non-nerdy content: we are in <a
+href="http://en.wikipedia.org/wiki/Arica">Arica</a>, right at
+the top of Chile. The hope had been to spend Christmas in  <a
+href="http://en.wikipedia.org/wiki/Lauca_National_Park">Lauca National
+Park</a>, but we haven't had any success hiring a car. We might spend
+Christmas here, eating barbecue and sitting on the beach. This idea is
+growing on me.
+
+</p>
+
+</p>
+  <p> <a href="/arcia.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>21 Dec 2012</span> &raquo; <a href="/bolivia.html">Bolivia</a></h2>
+  <p><p> Hello folks, it´s Laura here. On Monday we left San Pedro for
+the altiplano of Bolivia. We went with Cordillera Traveller and can
+recommend them, we had a great Bolivian guide. The border crossing is
+the most remote we have ever seen.  Shortly after the border we crossed
+into Reserva Nacional de Fauna Andina Eduardo Avaroa which is very rich
+in minerals and has isolated communtities of indigenous people living in
+harsh and isolated conditions. We stopped at several lakes and a pool
+heated by hot springs which was lovely even though it was thundering
+and hailing when we were in it. We stopped at Geyser Sol de Manaña.
+It was steaming away furiously. I couldn´t go close to it because of the
+sulphur but Pete´s lungs are stronger and he got some photos. The most
+impressive lake was Laguna Colorada, a Ramsar site which is red due to the
+pigments contained in algae present there. There were lots of flamingoes,
+mostly Andean but also Chilean and Puna/James flamingoes.  </p>
+
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/lz-HIRylOluT-LFnbV0Z_H4FfsMlZknWAM8paGx5dLE?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-uA42iOxd3Cw/UNSREdlm28I/AAAAAAAAJXY/feZO_rST9U4/s400/P1020007.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/pI65gpwhdWpS77zjXuSVBn4FfsMlZknWAM8paGx5dLE?feat=embedwebsite"><img
+    src="https://lh3.googleusercontent.com/-OJT_izBNS_0/UNSDsbmJ7dI/AAAAAAAAJRE/fj7pOyYCdXA/s400/P1050518.JPG"
+    height="300" width="400" /></a>
+</div>
+
+<p>
+For the duration of the trip we were on dirt roads in a 4x4 and at 3600-4900m
+altitude. We have never been anywhere so remote. The wildlife and scenery are
+spectacular. The first night was spent at a small dwelling in the middle of
+nowhere´at 4200m. We slept reasonably considering the altitude. On the second
+day we stopped at more lakes and interesting rock formations. One of the rock
+sights was depressing, lots of cans, rubbish and toilet roll strewn around from
+previous groups. It seems that unless bins and toilets are provided in every
+corner of the Earth that humans reach there will always be some idiots who ruin
+places with rubbish.  We broke down twice but after the fuel filter had been
+cleaned the trusty Toyota carried us on to San Juan a small settlement at 3600m
+where we spent the night in a salt hostel.
+
+</p>
+
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/EmpTztpKUf3ujL44H1z0M34FfsMlZknWAM8paGx5dLE?feat=embedwebsite"><img
+    src="https://lh5.googleusercontent.com/-GlQZsav5QL8/UNSUWYmneyI/AAAAAAAAJcc/XyfLYp9BwrU/s400/P1020163.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/qy0a28hFRE2ym93P0aYX2H4FfsMlZknWAM8paGx5dLE?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-UxjkzWxdy_Y/UNR-LLF7Q5I/AAAAAAAAJOo/LrS01LdARcw/s400/P1050612.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/s9TfAand-CGeGPfPMgTwEX4FfsMlZknWAM8paGx5dLE?feat=embedwebsite"><img
+    src="https://lh6.googleusercontent.com/-l1yQJdDhPn4/UNSRmVKgTqI/AAAAAAAAJYA/FXQNFJ4nac8/s400/P1020050.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/iUJeYbgBlz5elCSUfkwKFn4FfsMlZknWAM8paGx5dLE?feat=embedwebsite"><img
+    src="https://lh5.googleusercontent.com/-qw4opw6PoNA/UNSC1IYo-BI/AAAAAAAAJVA/yzS7_Zctcyc/s400/P1050486.JPG"
+    height="300" width="400" /></a>
+</div>
+<p>
+On the third day we drove on to the Salar de Uyuni, an amazing salt flat which
+is the world´s largest at 10,582 square km.  The elevation is about 3600m and in
+places the salt is 150m deep. In the rainy season it floods and is impassable.
+In summer there can be water close to the surface so a good guide is needed to
+avoid falling through. Our guide explained to us that the Salar rises by about
+5cm every year, but the process was lost on me due to not understanding enough
+Spanish. It is also the largest source of Lithium in the world and some salt is
+harvested by locals. The next stop was the train cemetry on the outskirts of the
+town of Uyuni. This was thoroughly depressing, the land around the town is
+covered in rubbish and it is grim. We passed a night there in a basic hotel due
+to trouble at the border. The indigenous people of Reserva Nacional de Fauna
+Andina Eduardo Avaroa are due 10% of the profits from tourism but they have not
+received it from the Government for one and a half years, so they are striking
+and blocking all access to the reserve. Hopefully they will get the money soon.
+
+</p>
+
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/vp_TAanChkvzO6qrF-VYVn4FfsMlZknWAM8paGx5dLE?feat=embedwebsite"><img
+    src="https://lh6.googleusercontent.com/-ZyhwwzbGveI/UNR-ilcHweI/AAAAAAAAJPA/BatOXtH7eI4/s400/P1050648.JPG"
+    height="300" width="400" /></a>
+
+  <a
+    href="https://picasaweb.google.com/lh/photo/cn4n9BBEsS3q-SQt28VR_n4FfsMlZknWAM8paGx5dLE?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-LytDqVB5XvE/UNSVqP7fgTI/AAAAAAAAJd0/_sRv0vOIs6g/s400/P1020218.JPG"
+    height="300" width="400" /></a>
+</div>
+<p>
+On Thursday we rose at 5am for the transfer to another border. It was a long, hot
+and uncomfortable day. We had to pay 15 Bolivianos to leave the country and then
+we waited around for a couple of hours for a minibus from Chile to collect us.
+We´re glad to be back on paved roads.
+
+
+</p>
+
+<p><a
+  href="https://picasaweb.google.com/102479403334301156799/Bolivia?authuser=0&authkey=Gv1sRgCOHl8qPpo8zmrgE&feat=directlink">the
+  album.</a></p>
+</p>
+  <p> <a href="/bolivia.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>16 Dec 2012</span> &raquo; <a href="/san-pedro-again.html">Around San Pedro de Atacama</a></h2>
+  <p><p> We are still in San Pedro de Atacama, after several great days. We
+have seen geysers, swam in hot springs, watched flamingoes and other
+high altitude birds, toured ruins, and marvelled at the landscape. We
+have avoided the local minefield.  </p>
+
+<p>
+The El Tatio geysers are at about 4200 meters, and the best time to see them is
+at dawn. The option we picked was to get on a tour bus at 4am. It was -5 degrees
+C when we arrived. The crazy option was to camp up there. The reason for the
+early start is that they are at their most impressive with cold air. Of course,
+it warms up fast....
+</p>
+
+<p>
+The geysers are really impressive. Bubbling mud, towers of steam, and fantastic
+colours. They come from a underground river from Bolivia which touches magma.
+When the water reaches the surface it is 85 degrees C. We heard some horror
+stories about people straying away from the paths and falling through fragile
+crust and others going too close for the perfect photo, falling in and later
+dying from the burns. Thankfully everyone in our group understood that the walls
+meant go no further. I'm hoping the photos come out.
+</p>
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/KVoWrnfE_QDwTg7Ze9k27lBkyxbwgklftcdC3Fi_vXs?feat=embedwebsite"><img
+    src="https://lh3.googleusercontent.com/-nJETJai-DN0/UM4triP-wHI/AAAAAAAAI-c/lq_IbOMz5uU/s400/P1010635.JPG"
+    height="300" width="400" /></a>
+
+  <a
+    href="https://picasaweb.google.com/lh/photo/pVUxEUe1aGOy0KeOKyDfklBkyxbwgklftcdC3Fi_vXs?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-fYodMsjOPyA/UM4txbFoNDI/AAAAAAAAI-k/ByTeM244TTE/s400/P1010653.JPG"
+    height="300" width="400" /></a>
+
+</div>
+
+<p>
+We have been to see two archaeological sites built by the Atacame&ntilde;o People - mostly
+the remains of buildings preserved for hundreds of years by the desert. The
+local museum has many of the objects found - and is excellent. Pukara de Quitor
+has many walls up a slope - the last stand of the locals when the Spanish showed
+up. Aldea de Tulor is the remains of a two thousand year old village. Its mostly
+buried in sand to keep it out of the wind.
+</p>
+
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/-frM_6bX1cbLuParQpbfE1BkyxbwgklftcdC3Fi_vXs?feat=embedwebsite"><img
+    src="https://lh5.googleusercontent.com/-nKcXlTcMK9g/UM3qZLqvOnI/AAAAAAAAI4c/TMNrFHLLUR0/s400/P1050405.JPG"
+    height="300" width="400" /></a>
+</div>
+
+<p> We been floating in Laguna Cejar - a salt lagoon!  Its 30 metres deep but you can't
+drown. The water is  denser than people. Its lovely and relaxing. When
+you get out and dry off you become covered in a crust of salt! We enjoyed
+it so much that we might go again if time permits.  </p>
+
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/Gw0ukLCYRvALWk8K1FQu51BkyxbwgklftcdC3Fi_vXs?feat=embedwebsite"><img
+    src="https://lh6.googleusercontent.com/-urBw7lSd8T8/UM4uX65Q6gI/AAAAAAAAI_Q/f1gTygSvxJc/s400/P1010917.JPG"
+    height="300" width="400" /></a>
+
+</div>
+<p>
+I was saying the desert was somewhat green. Biking and travelling around shows
+the green to be the local oasis. Beyond there, its a barren arid landscape. What
+bushes there are only grow when there is rain.
+</p>
+
+<p>
+We went to a high altitude lake  - Salar de Tara - where there were thousands of flamingoes, with the snow
+capped Andes of Bolivia behind. A wonderful sight.
+</p>
+
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/LwI8hikLCcyloczNnRmAlVBkyxbwgklftcdC3Fi_vXs?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-rDGhl3DlMlw/UM4s_Jt5dMI/AAAAAAAAI9k/bRqbMOJIQ7k/s400/P1010326.JPG"
+    height="300" width="400" /></a>
+
+</div>
+
+
+<p>
+On Monday we are heading to Bolivia for 4 days to see the largest salt flat in
+the world among other things. Then we'll be back in San Pedro for a night and
+then it's the night bus to Arica, the northernmost town in Chile. From there we
+hope to go to Lauca National Park and maybe we'll be camping there over
+Christmas.
+</p>
+
+<p><a
+  href="https://picasaweb.google.com/102479403334301156799/SanPedro?authuser=0&authkey=Gv1sRgCMnalJOztq-EFA&feat=directlink">The
+  album</a> and the <a
+  href="https://picasaweb.google.com/102479403334301156799/BirdsOfTheAndes?authuser=0&authkey=Gv1sRgCM7LjbHki8zYhAE&feat=directlink">Birds.</a>
+</p>
+
+</p>
+  <p> <a href="/san-pedro-again.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>16 Dec 2012</span> &raquo; <a href="/civil-rights-captcha.html">Civil rights Captcha</a></h2>
+  <p><p><b>Warning - nerdy content</b> I spent a lazy afternoon back in Dublin
+pulling apart Civil rights captcha, and I wanted to save my notes by
+sticking them on the blog.  </p>
+
+<h2>Background</h2>
+
+<p>
+Civil rights captcha is a system that aims to educate people on civil rights as
+well as tell humans from robots.
+</p>
+
+<ul>
+  <li><a href="http://captcha.civilrightsdefenders.org/">The site.</a></li>
+  <li><a href="http://www.wired.com/threatlevel/2012/10/empathy-captcha/">Wired article</a></li>
+  <li><a href="http://news.ycombinator.com/item?id=4619248">Hacker news thread</a>
+</ul>
+
+<p>Note that wired and therefore hacker news talk about filtering out internet
+idiots with this, which isn't mentioned on their site.</p>
+
+
+<h2>how secure is this?</h2>
+
+<p> First idea - they only have a few questions. I think each question
+takes a human to come up with it and review it.They can't really raise
+civil rights awareness with a incorrect collection of ills and they
+don't want to be sued for libel.  </p>
+
+<p>
+Download the page 1000 times.
+</p>
+<pre>
+for x in {0..1000}; do
+  curl -s -o dataset/$x captcha.civilrightsdefenders.org
+  done
+</pre>
+
+<p>
+Compare them to one another.
+</p>
+
+<pre>
+for x in dataset/*; do
+  diff dataset/0 $x | egrep '>'
+done | sort | uniq > questions
+</pre>
+<p>
+They have given 8 questions. Theories as to why:
+</p>
+
+
+<ul>
+  <li>they only have 8 questions.</li>
+
+  <li>they shard questions by IP or user agent. For example, they might
+  only give curl users 8 questions.</li>
+</ul>
+
+ <p>
+They might also have many correct answers per question. With a normal captcha you
+only have one correct answer.
+</p>
+
+
+<p>
+How many answers are there? Use chrome to grab a image url. Use curl to hit that
+url a few times. Each file has a different sha1sum (it would be nice to have a
+command line tool that uses a cheaper hash), so possibly a bug in the
+loop or a different image. Download 1000 images.
+</p>
+
+<pre>
+mkdir images
+for x in {0..10000}; do
+  curl -s -o images/$x 'http://captcha.civilrightsdefenders.org/captchaAPI/securimage_show.php?sid=xJZNm2G1mK5TQQH69mX3&newset=7&lang=en';
+done
+</pre>
+
+<p>
+Hash all the images, see 1003 different hashes. Ideas:
+<ul>
+  <li>different words</li>
+  <li>different lines over each word.</li>
+  <li>some sort of salting in the image to defeat hashing</li>
+  <li>bug in the loop.</li>
+</ul>
+</p>
+
+ <p>
+Look at the images. Lots of different words, some negative, some positive. Some
+dupe words, but not many. Download 6k images. All of them are different.
+</p>
+
+ <p>
+
+Peer at chrome's debugger. Watch the process. The javascript fetches one image with
+newset=1, and two more without the newset parameter. Each request has
+a sid parameter set to a random string. The random string is different
+for each image. The newset request sets a cookie, which is sent back to
+the server. Example cookie:
+
+</p>
+
+<pre>
+Set-Cookie: PHPSESSID=eq0llt1rjtfr0h3fa0mlorrm67; path=/
+</pre>
+
+ <p>
+Random string notes: its not clear what purpose the random string serves. If I
+had to guess, it prevents http caching.
+</p>
+
+ <p>
+Once the user enters a answer, it does validation with a request like so.
+</p>
+
+<pre>
+curl --cookie 'PHPSESSID=e66bfeidg9ukm1ovvk9cn1i8f6'
+'http://captcha.civilrightsdefenders.org/captchaAPI/?callback=jQuery1&code=concerned'
+</pre>
+
+
+result:
+
+<pre>
+jQuery1({"answer":"false"});
+</pre>
+
+ <p>
+So it presumably stores a map of session to correct answer on the server side,
+and returns a json blob if the user's input is correct.
+</p>
+
+<p>Code for a session</p>
+
+<pre>
+set -eux
+session_id=$RANDOM
+dir=session-$session_id
+mkdir $dir
+random=$(printf "%06daaaaaaaaaaaaaa" $session_id)
+curl -s -o $dir/1.png --dump-header $dir/1.headers
+"http://captcha.civilrightsdefenders.org/captchaAPI/securimage_show.php?sid=${random}&newset=1&lang
+
+cookie=$(awk '/Set-Cookie:/{print $2}' session/1.headers | tr -d ';')
+awk '/Set-Cookie:/{print $2}' $dir/1.headers
+curl --cookie "$cookie" -s -o $dir/2.png --dump-header $dir/2.headers "http://captcha.civilrightsdefenders.org/captchaAPI/securimage_show.php?sid=${ra
+curl --cookie "$cookie" -s -o $dir/3.png --dump-header $dir/3.headers "http://captcha.civilrightsdefenders.org/captchaAPI/securimage_show.php?sid=${ra
+
+echo $dir
+echo 'work out the answer'
+read answer
+
+curl -s --dump-header $dir/answer.headers --cookie "$cookie" "http://captcha.civilrightsdefenders.org/captchaAPI/?callback=jQuery1&code=${answer}"
+</pre>
+
+<h3>Can this be brute forced?</h3>
+
+ <p>
+Start out by sending the contents of /usr/share/dict/british-english
+</p>
+
+<pre>
+% wc -l /usr/share/dict/british-english
+99156 /usr/share/dict/british-english
+</pre>
+
+ <p>
+It takes 30s to test 100 words. So to test british-english would take
+8 hours.  New plan: find a list of words for emotions on the internet. <a
+  href="http://www.derose.net/steve/resources/emotionwords/ewordsRanked.txt">like
+  so</a>.
+</p>
+
+<ol>
+  <li>~700 words, so under 5m to test them all. Doesn't work.</li>
+
+
+  <li>How about solving the captcha, verifying it, then sending 10
+  verify requests for random words, then trying to verify the correct
+  answer again? Fails.</li>
+
+  <li>How about trying a random word, then trying the correct answer?
+  Fails.</li>
+
+  <li>How about trying the correct answer twice? Works both times.</li>
+ </ol>
+
+ <p>
+Even though the key space is quite small, O(100)s of words, brute forcing
+is hard because any false answer drops the session.  </p>
+
+ <h2>Conclusion</h2> <p>
+
+
+This is more robust than I expected. A lot of the attacks I expected
+to work don't work. There are fairly few questions, but the questions
+don't matter. There are O(100s) of text answers, but its generating a new
+image for each request, meaning that there isn't any point in solving the
+images offline (or spending time trying to use their site as a oracle
+for the images).  It reduces down to the normal image captcha problem -
+OCRing images online. Its also probably vulnerable to dos attacks on
+opening many sessions.  </p>
+
+<p>Post-script: actually reading their docs shows that its based on <a
+href="http://www.phpcaptcha.org/">php captcha</a>.</p>
+
+</p>
+  <p> <a href="/civil-rights-captcha.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>12 Dec 2012</span> &raquo; <a href="/san-pedro.html">San Pedro de Atacama</a></h2>
+  <p><p> Quick update, mostly to let my Mum know we haven't been kidnapped. We
+are in San Pedro de Atacama in Chile. The Atacama is the driest desert on
+Earth. We've been out for a walk, and its not as dry as I expected -
+there are streams and life along the watercourses. Of course, where
+there is no water, there is just dust.
+
+</p>
+
+<p> The journey was spectacular - massive salt flats, colourful rocks,
+and more wildlife, including flamingos. We're popping back to take a
+closer look at the flamingos tomorrow. Laura is hoping to see the rare
+James' flamingo, avocets and any other waders that might be hanging around above
+4000 meters. The pass at the top of the Andes is 4170
+meters - high enough to cause headaches, weird tingling in the fingers,
+and a bit of nausea. </p>
+
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/dwvYRBARv6uI7u50VY21LZlmM7l98u8CAR2_nvvPmYo?feat=embedwebsite"><img
+    src="https://lh6.googleusercontent.com/-kA9Y38NBQFE/UMimaSKQ6KI/AAAAAAAAIxw/DpjXtMpxCgs/s400/P1040888.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/VSX3XTwJNoIeUJoM9BiACZlmM7l98u8CAR2_nvvPmYo?feat=embedwebsite"><img
+    src="https://lh5.googleusercontent.com/-2JPjwupYX2Y/UMinQ_Et_NI/AAAAAAAAIy0/InW3bxEBgBo/s400/P1040964.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/aoVa8dV7YEIoPDcf_tsZ7plmM7l98u8CAR2_nvvPmYo?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-wFJOUPjrKvQ/UMinQJ63dhI/AAAAAAAAIyw/19b5O3ycbYE/s400/P1040930.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/e2kAMLutbBmlncQTEEvy35lmM7l98u8CAR2_nvvPmYo?feat=embedwebsite"><img
+    src="https://lh5.googleusercontent.com/-WO8l4yI1o20/UMilGdsX6vI/AAAAAAAAIxk/hzeBkxtlDQw/s400/P1050024.JPG"
+    height="400" width="300" /></a>
+</div>
+
+
+<p> We're been out stargazing, and the town is lovely. Not much more to
+report. <a
+  href="https://picasaweb.google.com/102479403334301156799/RoadToSanPedroDeAtacama?authuser=0&authkey=Gv1sRgCIH0-9K2xuq2tAE&feat=directlink">The
+  whole album</a></p>
+
+</p>
+  <p> <a href="/san-pedro.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>09 Dec 2012</span> &raquo; <a href="/cloud-forest.html">Birding in the Cloud Forest</a></h2>
+  <p><p> On Friday, we rolled out of bed and attempted to get to El Ray
+National park.  Sadly, the rain was not on our side. The road to El
+Ray is a 47km dirt track with many river crossings, and our guide -
+who was in a real 4x4 - didn't fancy doing it in the driving rain.
+Instead we headed for his local birding spots, and on the way back
+towards Salta he demonstrated the realness of his 4x4 (and the fact it
+wasn't a chelsea tractor) by pulling another car out of a ditch on a
+flooded road. The rescue was very Argentina - everyone stopped, and
+half the local males got out, started running around in rain and the
+deep mud helping, finding rope, tying it to the car and to our 4x4,
+and in the end pulling the car and passengers to safety. The other
+half of the population lent on their horns - we've even seen drivers
+toot at the cops here (The garda would find a reason to arrest you
+if you did that). Final twist to the rescue was our guide producing a
+<a href="http://www.youtube.com/watch?v=sLS3RGesIFQ">Crocodile dundee
+knife</a> to cut the rope off the front of his car. (Final final twist -
+Laura found a online review of a tour near Salta that described a mostly
+silent guide leading his party deeper and deeper into the forest, slashing
+at vegetation as he went. I'm pretty certain I've seen that movie).  </p>
+
+<p>Anyway, he took us birding, both by the lake and into the cloud forest. He was
+fantastic and we saw a lot. Photos I'm happy with:</p>.
+
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/Za1ID_GtNg_ACqkdYpHo-kiyP5ihtIc4N9_DVAIvlq0?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-uEzT7FjQpt8/UMO12wK9jSI/AAAAAAAAIpw/Pu1yY3_HfXQ/s400/P1000879.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/-x-tPKN933Bu_u9B7zUgEUiyP5ihtIc4N9_DVAIvlq0?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-AimPzE2i3n0/UMOygCjg6nI/AAAAAAAAIns/uJFUtESa6DQ/s400/P1000843.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/rdUJAmgoB2mx5dx1HUei60iyP5ihtIc4N9_DVAIvlq0?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-aw5NKRzfmU0/UMOtYvMuf9I/AAAAAAAAIkA/JQSBJ37w_yg/s400/P1000739.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/5PL1fYfI7Tp_1Tps4-HBNkiyP5ihtIc4N9_DVAIvlq0?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-bEcaRyB2iCw/UMUOTBAaRmI/AAAAAAAAIu0/fkNycWMstaA/s400/P1000730.JPG"
+    height="293" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/8bwSQB4UPGWTuvnKPCcoS0iyP5ihtIc4N9_DVAIvlq0?feat=embedwebsite"><img
+    src="https://lh3.googleusercontent.com/--0VDxVTDGEI/UMUbTzVeRXI/AAAAAAAAIv0/aJrTbsZ3cqw/s400/P1000880.JPG"
+    height="274" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/tXmERt7tzOlUsR7jOBk2eUiyP5ihtIc4N9_DVAIvlq0?feat=embedwebsite"><img
+    src="https://lh5.googleusercontent.com/-vKhYeMHn7mo/UMO1Pvc_UmI/AAAAAAAAIpU/ZGLiJc4Jsqk/s400/P1000865.JPG"
+    height="300" width="400" /></a>
+</div>
+
+<p>Spot the hummingbird in the last frame :-)</p>
+<p><a
+  href="https://picasaweb.google.com/102479403334301156799/BirdsOfTheCloudForestAndALake?authuser=0&feat=directlink">The whole album.</a>  We got to spend a night at Selva Montana Ecolodge
+which is a great place and has fresh milk - the first we've had since
+leaving Ireland. If you're wondering - we went with Mario from <a
+    href="http://www.clarkexpediciones.com/">clark expediciones</a> -
+    well worth it!</p>
+
+</p>
+  <p> <a href="/cloud-forest.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>09 Dec 2012</span> &raquo; <a href="/cachi-roadtrip.html">Road trip to Cachi</a></h2>
+  <p><p> We didn't do very much on Monday - we had hopes of going to the <a
+  href="http://www.maam.gob.ar/">museum</a>, but it
+was closed. The museum would defy all attempts to visit it. We did do a
+pile of planning and sorting stuff out, as well as tromping up the local
+hill. On Tuesday, we jumped in a hire car and took off on a road trip.
+</p> <p>
+
+We drove the southern tourist loop from Salta  - down to Cafayate, up
+a smaller road to Cachi, then though Los Cardones national park back to
+Salta. The lady in the tourist information office assured us we could do
+this in two days, sadly, this was not the case.  </p>
+
+<p> The road down to Cafayate was kinda boring until we got into the
+desert in Quebrada de Cafayate. Once again, weird and wonderful rock
+formations drawn by the wind and water. It was a lovely fast drive,
+although the Salta traffic is insane.  </p>
+
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/YCYm7AsUEK66tIp4qCLu1nTsYTndMeBasiFsbquMPUY?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-HT3mSFVCs6A/UMOa9wNFF7I/AAAAAAAAIeI/3ep5HMP3S_k/s400/P1040626.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/aeN1JQ1v3i-rZdFXB8fRbXTsYTndMeBasiFsbquMPUY?feat=embedwebsite"><img
+    src="https://lh5.googleusercontent.com/-dJhApP9KOyg/UMOLhX3M-TI/AAAAAAAAIZQ/TpP8Gfnltfk/s400/P1040635.JPG"
+    height="300" width="400" /></a>
+</div>
+
+<p> Cafayate is a lovely place. Its the second town in Argentina for
+wine, and if you are looking for a place to drink wine, go there rather
+than Mendoza. The local wine even comes in ice cream form! We wandered
+around for a while, drank some of the local wine, ate empanadas while
+drinking more wine from a jug, and peeked at the local museum - tons
+of pottery recovered from local archaeological digs. The best find in
+the local wine is torrontes - its a lovely white that people say is
+hard to get outside Argentina and in our opinion beats Sauvignon blanc
+hands down. We were a bit pushed for time, so we couldn't stay a day,
+much as we wanted to.  </p>
+
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/dP0cFKPfgwIFtVTWnDuG33TsYTndMeBasiFsbquMPUY?feat=embedwebsite"><img
+    src="https://lh3.googleusercontent.com/-BmL_och-koY/UMOMWH0XQ-I/AAAAAAAAIZk/cqAY_O3pOZU/s400/P1040649.JPG"
+    height="400" width="300" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/-OU6ZRO3f2Pzb5D97itoXHTsYTndMeBasiFsbquMPUY?feat=embedwebsite"><img
+    src="https://lh3.googleusercontent.com/-YuWekiWex9o/UMOhvsbBCBI/AAAAAAAAIfM/W7zU4MwYWf0/s400/P1000583.JPG"
+    height="300" width="400" /></a>
+</div>
+
+<p> The drive to Cachi was mostly on dirt roads. We set out zooming along
+on tarmac, through vineyards, looking at wonderful mountains with the sun
+blazing down. We overtook a local in his junker. One of the things that
+got me when I moved to Ireland is that one sees more cars with dented
+paneling etc than one does in the UK. Argentina lowers the standards
+a lot more :-). There are plenty of cars from the 60s, 70s and 80s on
+the road and some are about 50% rust on the outside, so who knows what
+state the axles, suspension etc are in. We promptly hit the dirt road,
+and crawled along at 30 kilometres a hour. The local promptly overtook
+us, going much the same speed as he was going on tarmac. We laughed.  </p>
+
+<p>
+
+The scenery on the drive is Fantastic. Look at the pictures!
+</p>
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/wa3eph_Q0BIlW80Civ6coXTsYTndMeBasiFsbquMPUY?feat=embedwebsite"><img
+    src="https://lh5.googleusercontent.com/-rIgz7z6TkW8/UMONW-oi9MI/AAAAAAAAIaE/alotQSJpRA8/s400/P1040694.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/vbUtmXOPgjDB68WU7CZbKHTsYTndMeBasiFsbquMPUY?feat=embedwebsite"><img
+    src="https://lh6.googleusercontent.com/-q-gE7IxIoFk/UMOkV0dbwUI/AAAAAAAAIgM/J2xq30jrVeg/s400/P1000630.JPG"
+    height="300" width="400" /></a>
+
+</div>
+<p>
+
+We saw parrots, woodpeckers, a small American Kestrel and a few Crested
+Caracaras among other birds.  </p>
+
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/ujdVEkDTfBnfqSDY3Y7AGXTsYTndMeBasiFsbquMPUY?feat=embedwebsite"><img
+    src="https://lh5.googleusercontent.com/-TU-C2Z-sWoM/UMOilbc4UQI/AAAAAAAAIfc/3c7NKjGLNaY/s400/P1000592.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/f2FQBL96EGb8NxyfpZHA4HTsYTndMeBasiFsbquMPUY?feat=embedwebsite"><img
+    src="https://lh3.googleusercontent.com/-CibwZolN9-4/UMOifmXhgCI/AAAAAAAAIfU/LvSgqa0hiaY/s400/P1000604.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/71AMYpK7zMWKJvgJ6sDGCnTsYTndMeBasiFsbquMPUY?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-j-6gsnE4QeQ/UMOl2pHOuQI/AAAAAAAAIhE/6ryNiUUtH4k/s400/P1000677.JPG"
+    height="300" width="400" /></a>
+
+</div>
+<p>
+
+We got a flat about 20 kilometers from Cachi. The car had been shaking
+about so much we didn't hear it go, but a passerby tooted to let us
+know. Two people who had never changed a tyre before (myself and Laura,
+if there is any confusion) jumped out, jacked the car up, and promptly
+failed to loosen the nuts. No amount of stomping, standing, and brute
+force would move the nuts. In the meantime, the car was heating up -
+by the end I couldn't hold my camera and the steering wheel was being
+held with fingertips. We asked a local for help in poor Spanish  - he
+did the same stomping routine. He asked a friend, who had a extender for
+the wrench. The extra metre of leverage did the trick. Science! The nuts
+had probably expanded in the heat.  </p>
+
+<p>
+
+Since we were now without a spare tyre, had hundreds of kilometers on
+dirt roads to go, and it was getting late, we stopped in Cachi. Phoned
+up Hertz, who said they would deliver a spare in a hour or two. The guy
+who was assigned to deliver the new spare looked at his map and decided
+not to bother, and also not to tell anyone. Grr.  We spent the night in
+a lovely hotel - El Cortijo Hotel Boutique. The thing about staying
+in hostels is that when we stay in a hotel, we wander about going "this
+is so nice! Feel the sheets! And air con!". The view was also lovely.
+
+</p>
+
+<div id="photo"> <a
+  href="https://picasaweb.google.com/lh/photo/G8vflnt1De4fn-Z0DbxMAHTsYTndMeBasiFsbquMPUY?feat=embedwebsite"><img
+  src="https://lh6.googleusercontent.com/-oSpvgUHLRV8/UMOPVXGB0vI/AAAAAAAAIbY/rF11kP7RKrE/s400/P1040745.JPG"
+  height="300" width="400" /></a>
+</div> <p>
+
+In the morning, we found the local tyre dealership (a massive operation -
+something tells me the owner doesn't want the road paved), got a new tyre,
+and set off.  The road down to Salta is a fun drive. Through Los
+Cardones national park, the road is as straight as the eye could see,
+and lined with warnings about speed being enforced. I figure that once or
+twice a year the cops go and ticket everyone for racing on the road. The
+park is stuffed full of cactus. A legend tells of a priest who fled
+over the plateau at night - thinking the cacti were Indians chasing him.
+
+</p>
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/7Nq33oA8en4KjTwraEuYFHTsYTndMeBasiFsbquMPUY?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-btxG52VNoIw/UMORKhHyP6I/AAAAAAAAIcQ/SbKiS-7nyEk/s400/P1040762.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/8hyXSl_X4hBAqJJYm_qDxXTsYTndMeBasiFsbquMPUY?feat=embedwebsite"><img
+    src="https://lh3.googleusercontent.com/--QiHHYZwfaA/UMOQ3x0EuII/AAAAAAAAIcE/onaBGcVtFCc/s400/P1040760.JPG"
+    height="300" width="400" /></a>
+
+</div>
+<p>
+
+The lack of turns in the park is made up for by the road down from it. The
+Satellite photo fails to show that it loses about 2000 metres in height - and
+its unpaved. The photo of the edge is a bit too scary.
+</p>
+
+
+<div id="photo">
+
+<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0"
+  marginwidth="0"
+  src="https://maps.google.com/?ie=UTF8&amp;ll=-25.175583,-65.844154&amp;spn=0.043732,0.084543&amp;t=k&amp;z=14&amp;output=embed"></iframe><br
+/><small><a
+    href="https://maps.google.com/?ie=UTF8&amp;ll=-25.175583,-65.844154&amp;spn=0.043732,0.084543&amp;t=k&amp;z=14&amp;source=embed"
+    style="color:#0000FF;text-align:left">View Larger Map</a></small>
+
+</div>
+
+<p>
+
+We just about managed to navigate around Salta and get the car back
+in time.  In short, if you're planning on going - go to Cafayate for
+wine, take a few days to drive there and back (not two), and take a
+wrench extender!</p>
+
+<p>
+
+Other advice for fellow travelers is to be prepared for the money
+situation here. In short it is crazy. Lots of small towns have no ATM
+or ATMs which run out of money.  That's OK, it's South America and
+we've managed to plan and carefully budget our way around it. What
+is more frustrating is that even in large towns many places including
+accommodation (decent hotels included) and restaurants will not take
+card payments. This means that if you are travelling to an area with no
+ATM you need to start extracting the money days in advance due to the
+limit of cash that you can take out in one day. It also means that if you
+are staying for a few nights in one accommodation you need to start the
+withdrawal process days ahead in order to be able to pay at check-out. The
+other approach is to come with money in several current accounts.  </p>
+
+<p><a
+  href="https://picasaweb.google.com/102479403334301156799/CafayateAndCachiRoadTrip?authuser=0&feat=directlink">All the photos</a>.</p>
+</p>
+  <p> <a href="/cachi-roadtrip.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>02 Dec 2012</span> &raquo; <a href="/desert.html">The Desert</a></h2>
+  <p><p>
+We are in Salta, after many hours on buses. <a
+  href="https://picasaweb.google.com/102479403334301156799/ValleFertilToSalta?authuser=0&feat=directlink">album
+  link</a>.
+</p>
+
+<div class="quote">
+We can tell you are not from around here, you are so white. -- some gent to
+Laura.
+</div>
+
+<h3>vital stats</h3>
+<ul>
+  <li>Location:  Salta, Argentina. </li>
+  <li>beard state: I found a razor. I'm happy about this.</li>
+  <li>steak tally: 7 </li>
+</ul>
+<p> We left Mendoza on the bus to San Juan. We found ourselves with a
+hour and a half layover there, almost all of it went into talking to bus
+companies about tickets. Transactions that would be trivial back home are
+nightmares of spanglish and pointing here. We then headed out into
+the desert - miles and miles of desert - to San Agustin de Valle Fertil
+(which everyone calls Valle Fertil). The bus ride was pretty comfortable,
+apart from whenever we crossed a dried  up watercourse. Rather than
+bridging the drop, or filling in the drop, the road just dropped down
+and up again. The bus driver, being used to this sort of thing, thought
+slowing down was weak.  </p>
+
+<p>The name comes from the valley being more fertile than the
+desert, not because its more fertile than, say, Ireland. Its a really
+nice place and we recommend it. The hostel reviews on tripadvisor were
+scary, so we checked into a hotel. Turns out this was a wise move as the
+local campsite also appears to be a scrapyard, and shortly after we got
+to the hotel, it started to hail massive stones. This would have made getting
+the tent up something of a challenge.  </p>
+
+<!--
+
+Be nice to have a photo here
+-->
+
+<p>
+
+The reason people come to Valle Fertil is that its the closest place to
+two parks in the desert, <a
+  href="http://en.wikipedia.org/wiki/Talampaya_National_Park">Talampaya
+  National Park</a> and <a
+  href="http://en.wikipedia.org/wiki/Ischigualasto">Ischigualasto
+  Provincial Park</a>. These are still well over a hundred
+kilometers from Valle Fertil. Both parks are colossal, but both let visitors
+into a small area of the park by tour only.  Both are famous fossil grounds,
+and one has rare and enigmatic pteroglyphs. Both have all extremes of
+weather (burning hot with no shade in the day, freezing at night, high
+winds, and sometimes snow lying on the cacti). I think they don't want
+people stealing stuff or being sunburnt to death.  </p>
+
+<p>
+We went on the tour of both, which is a 11 hour day. We got a local driver to do
+the driving. I would suggest that route for other folks interested in visiting -
+rather than taking two trips over two days. We think the three days of
+travelling there and back were well worth it.
+</p>
+
+<p>
+
+Talampaya had a tour of the canyon system, miles of desert,
+red rock shaped by wind and water, and traces of the civilisation that
+lived there 6000 years ago.  The pteroglyphs are tiny and hard to see -
+its incredible that people found them again. The canyons have a smear of
+green where the river has shrunk too, but there are traces of water
+a few feet up the canyons walls. Fear the flash flood.  </p>
+
+<div id="photo">
+
+  <a
+    href="https://picasaweb.google.com/lh/photo/yX4VlX6U3RLLxCaZtgQf09tzLUQvM8bkyDzY5OCS7H8?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-i9htf0JenqI/ULqcPRRA3_I/AAAAAAAAHpg/0AF9wadIx2s/s400/P1040286.JPG"
+    height="300" width="400" /></a>
+  <a
+    hrefe"https://picasaweb.google.com/lh/photo/adZpEvRL4K1ujkxwXGMxVttzLUQvM8bkyDzY5OCS7H8?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-bYg2Q-0ooC8/ULqdNmTHe8I/AAAAAAAAHqM/QYVswCw2CD0/s400/P1040300.JPG"
+    height="300" width="400" /></a>
+  </div>
+
+<p>
+
+The view out over the desert looks like nothing else I have seen. The rock
+formations are fantastic. I'm hoping the photos do them justice.
+</p>
+
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/XfZ8k8s0D7lxhKpp2QLaMttzLUQvM8bkyDzY5OCS7H8?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-6c2g43OrtlU/ULqeJzS-ZzI/AAAAAAAAHqk/g2wqZmBvJZM/s400/P1040346.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/Qp4aj6Rz7wG4AyiItLnl0ttzLUQvM8bkyDzY5OCS7H8?feat=embedwebsite"><img
+    src="https://lh3.googleusercontent.com/-SwzjJto0A58/ULqdLJccClI/AAAAAAAAHp8/DynZSPJvOcw/s400/P1040303.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/Pdi1lXLGPOooXFPxrJtcY9tzLUQvM8bkyDzY5OCS7H8?feat=embedwebsite"><img
+    src="https://lh6.googleusercontent.com/-OlQMr-ShJ-4/ULqfCyj8rJI/AAAAAAAAHq0/FRy47OgypRU/s400/P1040364.JPG"
+    height="400" width="300" /></a>
+</div>
+<p>
+
+
+We whizzed off to Parque Provincial Ischigualasto. The landscape here is
+like another planet.  My first impressions were of a dry dusty landscape
+and a wind that threatened to blow the doors off the car. The on-site
+museum protects the fossils from the wind and the water.  </p>
+
+<p>
+
+The tour is conducted from your car - in our case the ranger rode in the
+front seat - and it was excellent. This would not be a place to bring
+your own car, unless you hate the paintwork. The landscape lives up to
+the name Valle de la Luna - valley of the moon. A barren, lifeless,
+dusty gray landscape, marked only by the ravages of the wind and the
+occasional rainstorms. The ranger said this was the closest to the moon
+surface we could go to without leaving Earth.  We saw fossils
+in the rock, more wildlife, and spectacular rock formations. Having the
+ranger explain the local bird life was great. Hopefully we'll stick up
+some of the photos from Laura's camera.
+
+</p>
+
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/BkNeF1_oQ6KQh_tNVWEQK9tzLUQvM8bkyDzY5OCS7H8?feat=embedwebsite"><img
+    src="https://lh5.googleusercontent.com/-YnHVX42VCw8/ULqhBpAUbFI/AAAAAAAAHsA/4qgTBnigaQ8/s400/P1040473.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/Gqa4JQq7wxt62nQb7vh6i9tzLUQvM8bkyDzY5OCS7H8?feat=embedwebsite"><img
+    src="https://lh4.googleusercontent.com/-Uc2fvAT5azU/ULqh_xyyP3I/AAAAAAAAHsY/UiclZDTDIj8/s400/P1040500.JPG"
+    height="300" width="400" /></a>
+  <a
+    href="https://picasaweb.google.com/lh/photo/rkeOlgzCj7Qb2_-CSy4bittzLUQvM8bkyDzY5OCS7H8?feat=embedwebsite"><img
+    src="https://lh6.googleusercontent.com/-P3RijiilDG8/ULqi7W16GOI/AAAAAAAAHso/Q1Y4XhZFRYw/s400/P1040502.JPG"
+    height="400" width="300" /></a>
+</div>
+
+<p> We spent the morning afterwards wandering around the town - the local
+museum was either closed or being used to store loud, violent dogs -
+and up by the lake we saw birds and an iguana.  This is the first time
+we have seen one in the wild!  </p>
+
+<p>
+
+The bus back to San Juan was much the same, though it was carrying a
+couple of cops. As far as I can see, the police in Argentina are either
+slackers of the highest order, or never bother to take their uniforms
+and guns off. One does see them cuddling their girlfriends while in
+uniform. We still have not been shaken down.  </p>
+
+<p>
+
+San Juan is off the backpacking trail, so us with our crazy backpacks was the
+talk of the town. Much discussion of the size of Ireland compared to Argentina,
+the greenness of Ireland, if we were German, and my or my mum's view of Scottish
+independence.
+
+</p>
+
+<p>
+We had many hours between buses in San Juan, so we went out for dinner. The
+steakhouse not merely had a window into the kitchen (watch the flames! Watch the
+chef hacking giant lumps of meat then tossing them onto his barbecue), it served
+the largest steak I have ever seen.
+</p>
+
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/0o6xFrctAzpPEuRkLF9z09tzLUQvM8bkyDzY5OCS7H8?feat=embedwebsite"><img
+    src="https://lh6.googleusercontent.com/-0yDvda7mVU0/ULqk3PTLuJI/AAAAAAAAHtw/bQx7S4zqWYE/s400/P1040614.JPG"
+    height="400" width="300" /></a>
+</div>
+
+<p> Of course, by the time we had eaten, we were massively short on time,
+leading to a fast taxi ride and a sprint up the bus station steps. The
+bus was a bit late, saving our bacon. This was a 16 hour overnight bus
+trip, and we had been worrying about it. Turns out that the bus ride was
+pretty nice - more comfortable than anything up to business class. Seats
+recline, wine and dinner at your seats (wine great, dinner terrible),
+tons of leg room. This put British public transport (and every airline
+I've flown with) to shame.  </p>
+
+<p> Salta is very nice, though we haven't seen much of it so far.
+Having spent three and a half days on buses in the last week, we want
+to be based in Salta for a while. The plan is to head back into Chile
+for the new moon.  </p>
+
+</p>
+  <p> <a href="/desert.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>27 Nov 2012</span> &raquo; <a href="/mendoza.html">Through the Andes to Mendoza</a></h2>
+  <p><p>
+  We are in Mendoza, Argentina. This place claims to be the wine capital of the
+  world.
+  </p>
+
+
+<h3>vital stats</h3>
+  <ul>
+    <li>Location:  Mendoza, Argentina. </li>
+   <li>beard state: I can not wait to find a razor.</li>
+  <li>ping time to nuttall.im: 273ms. </li>
+ <li>ping time to google.com: 58ms .</li>
+ <li>steak tally: 3 (and a pile of BBQ). </li>
+</ul>
+
+  <p> We took the bus here. Its quite  a <a
+    href="http://maps.google.com/?ll=-32.85385,-70.126505&spn=0.040882,0.084543&t=h&z=14">ride</a>.
+    The border crossing was mental, we
+  were there for 2 hours. Apparently that is standard and can be
+  longer. The scenery was fantastic but it is all very dry. We arrived
+  in Mendoza to find that the hostel was having an <i>asado</i> - an Argentine
+  barbecue. After all day on the bus this went down a storm. There was
+  great wine out of unmarked bottles
+  and we met some good folks from
+  various countries. The meat is as tasty as people say, juicier and
+  with more flavour than anything we've had before.  </p>
+
+  <p>Notes for folks interested in the same journey - you get the bus from
+  Universidad de Santiago, its worth booking in advance (we hung around the bus station for
+  hours until the bus went),and Chilean bus rides are both cheap and
+  comfortable.
+  </p>
+
+  <p>
+  Today we went to Maipu to cycle around vineyards on a tandem. It was good but
+  hard work figuring out where to go and how to pay. There's a major shortage of
+  coins in Argentina. Our bus card ran out of money and there was nowhere to put
+  credit on it but fortunately the driver let us travel back to Mendoza for
+  free. The good news was we ate excellent food and drank wine before fighting
+  the bus.
+  </p>
+  <div id="photo">
+    <a
+      href="https://picasaweb.google.com/lh/photo/OGgDEw99n4lF_yX7vNgco9MTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img
+      src="https://lh3.googleusercontent.com/-5tyhY5j6hXY/ULVxc0rqQfI/AAAAAAAAHlo/J5px2iMwfG8/s400/P1040155.JPG"
+      height="300" width="400" /></a>
+  </div>
+  <p>
+
+  Simple things have become difficult. There is no obvious system when it comes
+  to crossing the road so it is always dicey. There are giant holes in the
+  pavement that threaten to suck you into a subterranean underworld. There are
+  some fancy new cars but most of them are ancient and are hanging apart and
+  totally battered. When we were on the bus we saw a guy riding in the back of a
+  pick up truck on a fast road when there was a perfectly good passenger seat.
+  </p>
+  <p>
+Communicating is difficult but we are picking up more words bit by bit.
+Fortunately the people here are very patient and helpful. The pronounciation in
+both Chile and Argentina is quite different which means that sometimes we are
+not understood when we speak what we were taught. It is amazing how many people
+have un <i>poco de ingles</i> though.
+</p>
+<p>
+It is roasting hot. We are leaving here tomorrow and heading on to San Agustin
+de Valle Fertil to see some national parks. Yet another day on the buses.
+</p>
+</p>
+  <p> <a href="/mendoza.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>25 Nov 2012</span> &raquo; <a href="/santiago-again.html">Santiago</a></h2>
+  <p><p>
+We are back in Santiago, where the internet flows freely and there is an
+English-speaking church full of welcoming people. We are having a rest day, and
+will be on the bus tomorrow to go to Mendoza in Argentina. The great thing about
+having working internet is we can upload some photos, links below.
+</p>
+<ul>
+  <li><a
+    href="https://picasaweb.google.com/102479403334301156799/EasterIsland02">Easter
+    Island</a></li>
+  <li><a
+    href="https://picasaweb.google.com/102479403334301156799/Santiago">Santiago</a></li>
+  <li><a
+    href="https://picasaweb.google.com/102479403334301156799/LauraSEasterIsland">More
+    of Easter Island</a></li>
+  <li><a
+    href="https://picasaweb.google.com/102479403334301156799/GettingOutOfTheDoor">Getting
+    out of the Door</a></li>
+</ul>
+<p>
+The flight out of Easter Island was somewhat amusing. We hauled down the tent,
+then hauled our stuff to the airport (which looked like airports the world over,
+with the exception of a pile of island-este artwork). When we checked in - a
+process of signing many many releases for our baggage, they explained the flight
+was delayed for four hours. This explanation was communicated by giving us a
+pile of lunch vouchers. It turns out that the rules of the air (namely, feed
+people when delayed) apply even if one is on a small volocano in the south
+pacific. Other rules that seem to apply include drinking all water before
+getting on plane. Rules that get ignored include removing all metal from pockets
+before going though the detector.
+</p>
+<p>
+Since the airport is a runway and a large shed, we were whisked off to a place
+in town for lunch at the expense of LAN. Said place had not had their delivery
+of food for the day. The sole thing they offered was garlic prawns. Pause. We
+could not imagine why they were on the menu to begin with. We clearly saw why
+they were the only things that the diners last night had not eaten. We worried
+about being on a plane for many hours with large numbers of people who had all
+eaten garlic prawns. We did not worry about vampires. We did worry about food
+poisoning. The waitress saw our faces and said they also had some smoked salmon.
+Saved!
+</p>
+<p>
+The last couple days on the island were fun. We took a boat out around the sea
+stack Motu Kau Kau and another two <a
+  href="http://en.wikipedia.org/wiki/Motu_Nui">islands</a>. We saw Masked Boobys
+and Great Frigatebirds. It was wonderful but  many other species of seabirds
+once nested on the islands so it was also a reminder of the consequences of
+unsustainable exploitation and overgrazing among other ecological issues.
+</p>
+
+<div id="photo">
+<a
+  href="https://picasaweb.google.com/lh/photo/dUANekw-JHGqe5IXYTm-L9MTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img
+  src="https://lh5.googleusercontent.com/-HBVFwjWyCn8/ULJntKjmuqI/AAAAAAAAHNE/IWlD1_695Fg/s400/P1030887.JPG"
+  height="270" width="400" /></a>
+<a
+  href="https://picasaweb.google.com/lh/photo/J-Rkk2yFCi_Nc316voU6PdMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img
+  src="https://lh5.googleusercontent.com/--y1zpvF-1gM/ULJnuN0q8JI/AAAAAAAAHNQ/dcs-fbmNaeo/s400/P1030782.JPG"
+  height="254" width="400" /></a>
+
+</div>
+
+<p>
+We tromped up <a href="http://en.wikipedia.org/wiki/Rano_Kau">Rano Kau</a>, an
+old volcano with the ceremonial village <a
+  href="http://en.wikipedia.org/wiki/Orongo">Orongo</a> on the top. The view
+into the crater is like looking at another landscape altogether. The village
+consists of many restored stone buildings, which reminded me of <a
+  href="http://en.wikipedia.org/wiki/Skara_Brae">Skara Brae</a>.
+</p>
+
+<div id="photo">
+<a
+  href="https://picasaweb.google.com/lh/photo/m1VnAg5u-67_jjdWLmd9TtMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img
+  src="https://lh4.googleusercontent.com/-Xd9e1ksSKds/ULJn1_wWaDI/AAAAAAAAHPY/rto2JThXPKM/s400/P1030956.JPG"
+  /></a>
+<a
+  href="https://picasaweb.google.com/lh/photo/razwMl95fP61GPdGibFhrdMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img
+  src="https://lh5.googleusercontent.com/-4L0YHPdvjeU/ULJn7MpmF8I/AAAAAAAAHN4/k60diqjGtEg/s400/P1030975.JPG"
+  /></a>
+</div>
+<p>
+On the last night we found ourselves in a small restaurant which a couple at the
+campsite suggested. Turns out this place had a giant barbeque. We found
+ourselves stuffed with only a few bites... on average we're eating about two
+meals a day, partly due to the heat, partly due to lack of need for more. The
+way we wash our clothes has also changed:
+</p>
+
+<div id="photo">
+  <a
+    href="https://picasaweb.google.com/lh/photo/VmIyZizV5hl2dlp3ZCcqBtMTjNZETYmyPJy0liipFm0?feat=embedwebsite"><img
+    src="https://lh6.googleusercontent.com/-V6ut8k5hw6w/ULKMhmIZCTI/AAAAAAAAHd8/U696vvqCbuU/s400/P1000395.JPG"
+    /></a>
+</div>
+</p>
+  <p> <a href="/santiago-again.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>22 Nov 2012</span> &raquo; <a href="/easter-island.html">Easter Island</a></h2>
+  <p><p>
+We are on Easter Island. It is a magical place.
+</p>
+<h3>vital stats</h3>
+<ul>
+
+
+  <li>Location: Easter Island, about 2000 miles from the chilean coast, about
+    8000 miles from the UK.</li>
+  <li>beard state: bristly and annoying.</li>
+  <li>ping time to nuttall.im: 2212ms. </li>
+  <li>ping time to google.com: 1306ms (and 15% packet loss).</li>
+  <li>steak tally: 3 Laura thinks we should keep a tally. </li>
+</ul>
+
+
+<p>
+We flew in on Monday, watched a massive downpour
+from the airport concourse, and  got a ride to the campsite. The fact that the
+ride was in the load-bed of a pickup truck did suggest that this was a different
+place.
+We pitched the tent, and went for a look around. There are palm, coconut and
+banana trees all over the place. No one wears seatbelts.
+The Chilean naval base looks like a beach hut. We have taken hundreds of photos,
+<a href="https://picasaweb.google.com/102479403334301156799/22112012">A crude
+  sneak preview.</a>
+</p>
+
+<p>
+The statues are massive and eerie. We spent some time staring at them. There are
+no signs as to why they are there or how they were made.
+</p>
+
+<div class="quote">
+  <p>
+  Pete They must have been raised by aliens. Wait, I probably said that
+  yesterday. <br />
+  Laura: Yesterday you just pointed and said aliens! aliens!
+  </p>
+</div>
+
+<p>
+Tuesday we went horse riding up to the top of the Island. This was massively
+painful, and was probably a mistake. We are plotting making a parody of I´m on a
+horse.
+Afterwards we staggered around the museum
+(very much like Newgrange - they have no idea why the statues are there) and
+then wandered into town to drink picso sours until we stopped hurting. The local
+beer is wonderful too.
+</p>
+
+<p>
+Yesterday we rented a car (a fake 4x4 - it looked the part but didn´t have four
+wheel drive) and zoomed around the sites. The sites are wonderful - hundreds of
+statues just standing there.
+We drove around to the island´s beach, which was paradise. White sand, lovely
+clear water, coconut trees.
+We watched the fishes swim past - a sight I have never seen in Britain or Ireland.
+There were flat fish and schools of smaller fish and the occasional large fish
+of different sorts.
+The beach had a excellent warning sign: danger, falling coconuts. It was just
+spectactular.
+</p>
+
+<p>
+Notes from Laura:
+Car hire here is very simple, you ask for a car and you get the keys, no
+questions asked about a licence and no insurance. The locals ride around in the
+back of trucks and whole families
+ride around on a single motorbike without helmets. The Daihatsu chugged along
+and the engine sounded knackered. As soon as we got off the tarmac road and on
+to the dirt tracks we knew why
+all the controls felt so loose and shaky.
+</p>
+
+<p>
+The bird diversity here is low although there are islands offshore which are
+important for seabirds. The highlight so far has been Red-tailed tropicbirds.
+Common diuca finchs are everywhere
+but they are non native. One bird of prey species is also everywhere
+and is probably the Chimango Caracara can´t be sure yet. Now back to Pete...
+</p>
+
+<p>
+We´re met some interesting people here. Main source of giggling was an american
+family on the horse riding trip.
+The adult son was on his gap year in Buenos Aires, and the parents had flown
+down to vist him and tour the sites.
+Half way around the riding, Mum started nagging son about the fact he was not
+wearing sun cream on the back of his neck. "But mum, I do not want toooo".
+We also watched a guy run around the statues at Rano Raraku. He also did
+handstands in front of them. He was quietly mocked by a pair of german women
+walking ahead of us.
+</p>
+
+<p>
+I sense the nerds might be interested in the internet connection. I suspect a
+sat connection. It has about 10kbs of bandwidth.
+I also think the router here is doing dialup to a number in mainland Chile,
+since its the second hop of the traceroute that has the crazy latency.
+ssh is pretty show but not terrible. web browsing is painful. The Picasa
+uploader for photos is useless. I think there are a few sites out there thinking
+we are doing a slowaris attack.
+</p>
+
+</p>
+  <p> <a href="/easter-island.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>18 Nov 2012</span> &raquo; <a href="/valpanasio.html">Valparaiso</a></h2>
+  <p><p> Yesterday we went to Valparaiso, which is home to the planet's
+strategic reserve of Napoleonic tat. Its a lovely port on the coast near
+Santiago. It was a happening place until an earthquake and the opening of
+the Panama Canal pretty much wiped it out. Sir Francis Drake torched the
+place, so they are always happy when more brits show up. (just kidding).
+</p>
+
+<p> In the good old days, ships bound for California had to sail around
+Cape Horn in the very south of Chile, then past tons of Patagonian  fjords
+(<a href="http://en.wikipedia.org/wiki/Slartibartfast">Slartibartfast</a>
+would be proud), until getting to Valparaiso, the first real port. The opening
+off the canal cut off the need to go around Cape Horn. It also cut off
+Valparaiso's source of income. The main things of note in the town now
+are the Naval College and port. We wandered around Naval Muesum, which
+hangs off the College.
+
+</p>
+
+<p>
+More history: The Royal Navy began a massive demobilisation as Napoleon
+was shipped off to Elba. At the same time, the South American republics were
+fighting for independence from Spain. The Chilean founding fathers (one of whom has a
+massively confused ancestry and the surname O'Higgins, making many street names
+sound familar) suggested to out-of-work Royal Navy officers that they might like
+a job. The prize catch of this was <a
+  href="http://en.wikipedia.org/wiki/Thomas_Cochrane,_10th_Earl_of_Dundonald">Thomas
+  Cochrane</a>, who is a big deal in the history of the Chilean Navy. Approx one
+and a half Nelson's worth of a deal. The museum goes into this in some detail.
+</p>
+
+<p>
+The main problem the museum has is that Chile hasn't actually been at war with
+anyone for over 100 years. The Coup is politely brushed over, though there is a
+room about a admiral who ended up in charge, with no discussion of how he became
+president.
+</p>
+<p> The rest of the town is lovely - full of narrow winding streets, street murals,
+funicular railways, and a wonderful view. Go for a wander if you're ever there.
+</p>
+
+<p>This afternoon we wandered up <a
+  href="http://en.wikipedia.org/wiki/San_Crist%C3%B3bal_Hill">San Cristobal
+  Hill</a>. The view from the top over Santiago is immense. The city sprawls
+for miles.
+</p>
+
+<p>We have actually managed to put up photos from <a
+  href="https://picasaweb.google.com/102479403334301156799/Valparaiso">Valparaiso.</a></p>
+
+
+</p>
+  <p> <a href="/valpanasio.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>17 Nov 2012</span> &raquo; <a href="/wandering.html">Wandering around Santiago</a></h2>
+  <p><p>
+We have been in Santiago for about two days now. In real terms, this is the end
+of our stay. We had assumed we would conk out due to jetlag, but that has not
+really happened. I think this is due to the time difference being pretty small
+- only three hours - and due to us being tired enough to sleep on the flight.
+We are staying at a lovely hostel in Barrio Brasil. Its a old building, full
+of wood panelling. We do not know what it was before it was a hostel - the guy on
+the desk thinks it was a government building.
+
+</p>
+
+<p>
+
+The Hostel is in a area full of car parts shops. Every single business seems
+to be a car parts shop. No idea why. No one we have asked knows why. In the
+middle of the neighbourhood is a monkey puzzle tree. All the buildings are old
+and dusty and coming apart.
+</p>
+<p>
+
+On the first day, we took the metro out to Las Condes - a modern neighbourhood
+that reminded me of Vancouver. Its has the same high rise glass buildings and
+looming mountains. Unlike Canada the mountains are brown - the same colour as
+the hills over the bay from San Francisco, but much closer and much bigger.
+</p>
+<p>
+
+One of the things I like here is that eating and drinking often takes place
+outside, on the street. The climate supports that. Every now and again, some
+crazy guy suggests that Edinburgh could have the same cafe culture. Then it
+starts raining and people make fun of him.
+</p>
+<p>
+
+
+On the first night we ate in a great restaurant and had our first pisco sours, a
+favourite drink here. They are made from distilled grapes and are very
+refreshing. Calf testicles were on the menu but we avoided them and had raw wild
+boar instead.
+</p>
+<p>
+
+The second day we wandered out of the neighbourhood around the hostel and
+into la centro. We toured the old buildings of Santiago. The national
+museum is a very old building just off the central square, is pretty
+much incomprehensible without a good grasp of spanish. It also cuts
+right on a coup in 1973, which was a bit creepy. We then wandered over
+to the presidential palace and the statue of Allende.  The main thing
+thats different about here is that all the old buildings, offices of
+government etc are overshadowed by lots of massive grey tower blocks.
+
+</p>
+<p>
+
+We wandered up Cerro Santa Lucia - a hill near the center of town. Looked out
+over miles of tower blocks and smog. We wandered through the rush hour traffic -
+which is completely insane by the way, I feel like I am taking an advanced course in
+jay-walking - into Barro Bellavista. This neighbourhood reminded me of Fremont
+in Seattle, though without the "set your watch back five minutes" sign.  We
+shunned climbing up a hill to see the papal statue.
+</p>
+<p>
+We ate curry for dinner. Its not that, uh, exotic, but we freaked out at the
+idea that we might not eat curry for three months. Was good. So far, a good time
+being had by all. Had hoped to get some photos on the web, but that has not
+happened yet.
+</p>
+</p>
+  <p> <a href="/wandering.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>16 Nov 2012</span> &raquo; <a href="/google-auth.html">Google Authenticator</a></h2>
+  <p><p><b>Warning</b> More nerd content. </p>
+
+<p>I found myself typing this (and the post before it) over <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html">Putty</a> (Note for the more twitchy - Strong encryption is legal in England (where is computer is) and Chile and Argentina. The list of countries that outlaw strong encryption is pretty similar to the list of countries with records of making citizens vanish.) Putty does not understand ssh keys in whatever format openssh uses. I dare not dig deeper. Having a system where I download a ssh key onto a untrusted machine is not wise. Having a system where I enter a password into a untrusted machine also is not wise</p>
+
+<p>To deal with this, I set up <a
+  href="http://code.google.com/p/google-authenticator/wiki/PamModuleInstructions">Google
+  authenticator</a> for pam. This works pretty well so far - on a trusted
+machine, I can continue to use ssh keys, and on a untrusted machine, I can use
+the same one time system as I use for email etc. I also have rescue codes in my
+pocket incase I lose my phone.</p>
+
+</p>
+  <p> <a href="/google-auth.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>15 Nov 2012</span> &raquo; <a href="/santiago.html">Santiago</a></h2>
+  <p><p> We've made it to Santiago! Long trip, lots of packing. Looking
+forward to decompressing a bit.
+</p><p>
+
+<h3>Vital stats</h3>
+<ul>
+  <li>Location: Santiago, Chile.</li>
+  <li>Beard state: soft sandpaper</li>
+  <li>Ping time to google.com: 42ms (200.10.266.231)</li>
+  <li>Ping time to nuttall.im: 290ms</li>
+  </ul>
+
+When I was a kid I played <a href="http://en.wikipedia.org/wiki/Spycat">Spycat</a> which
+depicts a guy trying to get his stuff together and leave London. Thats
+roughly what the last few days have been like, without the cctv and
+the eighties parody. After two days of solid packing and little sleep,
+we made it to the airport with all our stuff - thanks to Mark our pastor
+for giving us a lift :-)
+</p>
+
+<p> We flew into Madrid airport. The plane was only about a third full
+- probably should have been a warning sign - and the pilot didn't think
+much of this new-fangled concept of keeping his plane going in a straight
+line on takeoff. The airport was massive and completely empty. It was like
+wandering around in a ghost town. The size and quiet brought to mind a
+concrete cathedral. It reminded me of the new terminal at Dublin before
+it got airlines, or the cinema in eastpoint. Why do countries always
+decide to upgrade their capital airport just before the money runs out?
+
+</p><p> We had a many hour wait for the next flight, so we popped
+into Madrid on the metro. The metro was completely packed. Theory one:
+Madrid is some sort of prison camp for obnoxious people from all over
+Europe. They get carted off, taught spanish, and told to live there until
+they get manners. The only reason we haven't heard about this is the
+eurozone - if Britain would just join or Ireland would just stop losing
+money, we too could ship our folks off to Madrid. I also suspect the
+Spanish are dreading the arrival of Cameron. Theory two was that it was
+rush hour, which has the advantage of being simple and is probably true.
+
+</p><p>
+As I said, we've been working on speaking Spanish. Fears became flesh when
+we heard the first announcement in Spanish on the plane. We're probably
+doomed. Getting dinner in Madrid did nothing to reassure us. Leaving
+the restaurant, we promptly found ourselves close to a demonstration,
+along with many riot police. And when we got back to the airport, it was
+announced that Spain was having a general strike. This possibly explains
+the quiet airport.
+</p>
+<p>
+
+I read through "In Patagonia" and "The old Patagonian express" on the
+flight; good reads. We'll probably get rid of the books soonish to save on
+weight. Paul Theroux makes fun of travel books that talk about arriving in
+places by plane "the toy town appearance of a city in the Andes" but for
+us it wasn't like that. We got on the plane, rejected the food and fell
+asleep. At some point - possibly after coffee - we flipped up the window
+blinds and the Andes were right there. Quite a sight. (Note from Laura:
+this is a classic case of Pete's reserve - it was an outstanding view).
+</p>
+
+ <p> We've survived Chilean customs (quick panic about the pepper
+pot we were carrying), pushed past the taxi drivers and got into town
+by bus. First impressions are its somewhat like California. Its hot and
+dusty, roads are big. They seem to be building concrete tower blocks
+here - possibly due to the earthquake. Seems crazy to me to build high
+and heavy on top of a fault line, but what do I know. Laura thinks the
+place is crumbly. No idea what she means. I fear her apple crumble.
+The hostel is nice, and has good internet. Woo.
+
+
+</p>
+
+</p>
+  <p> <a href="/santiago.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>12 Nov 2012</span> &raquo; <a href="/packing.html">packing</a></h2>
+  <p><p>Today I watched <a href="http://en.wikipedia.org/wiki/Last_Exit_to_Springfield">Last exit to
+  Springfield</a> twice. This must be what being unemployed is like. Soon I will
+vote tory. In other news, I rang my british bank and asked them not to block my card.
+They told me the blocking was done by an automatic system, it was impossible to
+override said system, and it was for my protection. The back of my head went
+<a href="http://www.youtube.com/watch?v=oOjXyarN3-Y&feature=related">duh duh dun-duh duh</a>. </p>
+
+<p>
+We've been packing like crazy. Turns out that we have both way more and way less
+stuff than we thought. The good news that stuff packs really well into our
+storage space. The bad news is we have way too much stuff. Seems like we've been
+packing for weeks and weeks.
+</p>
+
+<p>Vaguely amusing side story here - Laura has labelled the three euro boxes sold by
+the storage place as a complete rip off, a scam more blatant than my folder full
+of <a href="http://en.wikipedia.org/wiki/Nigerian_scam">419 mail.</a> So we've
+popped around to the local off licenses and picked up tons of old booze boxes. A
+good chunk of them are for <a href="http://en.wikipedia.org/wiki/Prosecco">Prosecco</a>.
+Who are our neighours? What are they celebrating? How do we get invites? The world is full
+of questions.
+</p>
+
+<p>Its not all cardboard and tape. Some recent photos from around the area:</p>
+<ul>
+  <li><a href="https://picasaweb.google.com/102479403334301156799/99ViewsOfDublinBay">two weeks ago</a></li>
+  <li><a href="https://picasaweb.google.com/102479403334301156799/LastDaysOfDublin2012"> Last weekend</a></li>
+  <li><a href="https://picasaweb.google.com/102479403334301156799/SunsetOverTheBay">Somewhat older sunsets</a></li>
+</ul>
+
+<p> The schedule is simple - tomorrow, put everything in storage, and wednesday,
+get on plane ;-).</p
+
+
+
+
+</p>
+  <p> <a href="/packing.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>08 Nov 2012</span> &raquo; <a href="/updates.html">updates</a></h2>
+  <p><p>
+
+I have one day of work left. My boss points out that I'm not being
+fired, and I even get to keep my badge. And my
+gun<sup><a href="#fn1" id="ref1">1</a></sup>. Sarah, our admin, can't wait to have another
+free desk. She hasn't actually said "when do you go? I need the space",
+but she's thinking it hard. The other work related content is
+
+</p>
+
+<div class="quote">
+<p>
+Laura: While you don't work for the daily mail, you do work for google,
+which lets people find daily mail articles on cancer, so you're pretty much
+internet Hitler.
+</p>
+</div>
+
+<p>
+
+Laura's been making us learn Spanish. The idea is that we'll not
+be one of those annoying people who expect the whole world to speak
+English. Instead we'll be saying No lo entiendo a lot. The guide book
+claims that Chile is one of the places where the locals are really glad
+the visitors attempt to speak the language. Sounds like a lie. Reminds
+me of the Norway guidebook that claimed that speed limits were carefully
+followed and ruthlessly enforced.  At the point in which the tenth BMW
+doing 150&#37; of the limit blew past us, we saw the error of our
+ways. Or the walking in Ireland book which directed us into not one but
+two bogs. Getting to the top of one hill in the driving rain and miles
+of bog, then seeing the dry trail up the other side wasn't a big enough
+hint. A month or so later, still following the book, we found ourselves
+sliding down a very boggy, very steep hillside. You might wonder how
+one can have a non-flat bog. This is article seven of my mysteries of
+Ireland questions, after such greats as pondering the celtic tiger,
+the catholic church, and people still living in Limerick. Anyway,
+ranting over. We will see how the Spanish works out.
+</p>
+
+<p>
+
+I wandered along and got some Chilean and Argentine money earlier in the
+evening. It came from the currency exchange place near Trinty college, which was
+the only place in all of Dublin to have south american money. Said place gives
+the faint air that its predecessor was target of a 4am ram raid. Or possibly a
+ned with a shotgun. Its hard to tell.
+
+</p>
+
+<p>
+
+Chilean money reminds me of the collapse of the Wilmar republic. Its
+not that Chile is going into any sort of depression, its just that the
+numbers are so big. Argentine money, on the other hand, is shaky enough
+that places often just want to be paid in dollars. Sad.
+
+</p>
+
+<p>
+We've started packing. This is not going well.
+</p>
+
+
+<sup id="fn1">1. Just kidding.<a href="#ref1" title="Jump back to footnote 1 in the text."></a></sup>
+</p>
+  <p> <a href="/updates.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>05 Nov 2012</span> &raquo; <a href="/trains.html">trains</a></h2>
+  <p><p><i>"Are the train tracks still broken?"</i> -- the internet</p>
+
+
+</p>
+  <p> <a href="/trains.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>05 Nov 2012</span> &raquo; <a href="/flying.html">flying</a></h2>
+  <p><p>
+We've been looking at flying around. Laura has been worrying about the standards
+of planes. Actual conversation this morning:
+</p>
+
+<p class="quote">
+Pete: This plane looks completely normal.<br />
+Laura: Pete! Its like a hobby plane! <br />
+Pete:  Hey! Its got windows n stuff. <br />
+</p>
+
+</p>
+  <p> <a href="/flying.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>04 Nov 2012</span> &raquo; <a href="/nerdy-stuff.html">nerdy notes</a></h2>
+  <p><p>
+I'm a nerd. Here's some nerdy notes.
+</p>
+
+<p>
+
+Cameras: I'm planning to take my point and shoot. its maybe
+a year old. Its grand. Now the bad news is that I can take
+a lot of photos - over 100 a day. So amazon sent us 10 8g sd
+cards. Betcha we still run out. Betcha that I look at the idea
+of only 80g of storage and laugh. I've also bought space on
+<a href="https://picasaweb.google.com/102479403334301156799">Picasa</a>
+which was dead cheap. The hope there is that we'll be able to get the
+originals back through <a href="https://www.google.com/takeout">takeout</a>
+later. Facebook is much more of a pain in this respect. We've also got
+some blank cds, which we'll try and back stuff up onto. The fear here
+is both losing or damaging a SD card, and also theft.
+
+</p>
+
+<p>
+My Camera can upload photos direct to the internet. Making this functionallity
+work has been a pain in the backside. It also seems to drain the battery. We'll
+see if it works out there.
+</p>
+
+<p>
+
+We'll probably want to get into email and facebook while
+we're out there. We'll probably do it from internet
+cafes with interesting collections of malware. So <a
+href="http://www.mattcutts.com/blog/google-two-step-authentication/">2
+factor</a> and <a
+href="https://www.facebook.com/note.php?note_id=10150172618258920">SMS
+auth</a>. SMS auth is a bit more of a pain as we don't really know phone
+numbers out there - experience and common sense argues for buying a new
+sim card. I've also picked up a
+<a href="http://www.yubico.com/yubikey">yubikey</a> for
+<a href="https://lastpass.com/">lastpass</a>. We'll probably still have
+problems.
+</p>
+
+<p>
+
+I'm taking an android phone, and to reduce the impact of it being lost or
+stolen I've set up the android / google apps corp system for registering
+phones <a href="https://www.google.com/apps/mydevices">the control
+panel</a>. It lets you ring phones, wipe phones remotely and tells you where
+they are. Its a google apps for your domain feature that actually costs
+money, but its pretty cheap. And it means I never lose my phone again. I also set
+up the normal security settings - encrypting the phone and so on. We'll see.
+
+</p>
+
+<p>
+This site is hosted on a little virtual machine sitting in London. To get into
+it I depend on ssh keys. I've stuck those keys on my phone and can connect with
+<a href="https://code.google.com/p/connectbot/">connectbot</a>, but using a unix
+text editor with a phone's keyboard may drive me insane. We'll see how much
+blogging we do ;-). I have thought about putting <a
+  href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">putty</a> and the
+keys on a USB stick and plugging it into internet cafes - we'll see.
+</p>
+
+<p>
+I also have a kindle. I like the kindle as its dead light and has a ton of books
+on it. Laura points out the kindle will probably be nicked. We'll see. At least
+I bought a waterproof bag for it at some earlier point.
+</p>
+
+</p>
+  <p> <a href="/nerdy-stuff.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>04 Nov 2012</span> &raquo; <a href="/eating-up.html">eating up</a></h2>
+  <p><p>
+Laura pointed out to me last night that we have been eating up bits of food (so
+we don't have to throw it away when we go) since we got back from <a
+  href="https://plus.google.com/photos/102479403334301156799/albums/5806918868281229841">Salisbury</a>
+and <a
+  href="https://plus.google.com/photos/102479403334301156799/albums/5806928066457692993">Bruges</a>.
+Thats something like five weeks of eating. Worrying. However, we have made ribs
+twice. Recipe is tasty and easy:
+</p>
+
+<ul>
+  <li>3 spring onions, white part only, finely sliced</li>
+  <li>1 tablespoon sesame oil</li>
+  <li>2 garlic cloves, crushed</li>
+  <li>1 teaspoon wholegrain mustard</li>
+  <li>1 teaspoon chilli paste</li>
+  <li>3 tablespoons hoisin sauce.</li>
+  <li>3 tablespoons mango chutney.</li>
+  <li>&frac12; sea salt</li>
+  <li>&frac14; black pepper</li>
+  <li>125ml Coopers pale ale</li>
+  <li>2 racks of american style ribs (600-700g)</li>
+</ul>
+
+<p>
+Its really easy to make. Combine everything but the ribs together in a bowl -
+this part smells pretty bad. Cut up the ribs into eatable sizes and stick
+them in a deep tray. Pour the marinade over the ribs and leave them. The book says
+for a hour or two, but we normally leave them for a day. Stick them in the oven
+at a low heat for a hour or so, then grill them. Avoid comments from Laura about
+the lack of salad, veg, etc.
+</p>
+
+<p>
+Swiped from the cooking with beer book my parents got us. Its a tasty tasty
+book.
+</p>
+
+</p>
+  <p> <a href="/eating-up.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>03 Nov 2012</span> &raquo; <a href="/first-post.html">First!</a></h2>
+  <p><p>We're off to Chile!</p>
+
+<p>
+Background: we've been talking about taking a chunk of time off. Its a good time
+for both Laura and I to take time off work, so now is the moment.  We were
+talking about going to New Zealand and Australia, but we found photos of Patagonia on the <a href="https://www.google.ie/search?q=patagonia&hl=en&safe=off&prmd=imvns&source=lnms&tbm=isch&sa=X&ei=4XiVUNC9N9SAhQeXyoDICw&ved=0CAoQ_AUoAQ&biw=1366&bih=619">internet</a>, and our minds were set.
+</p>
+
+<p>
+We've away for 3 months, going to Chile and Argentina. We have a flight into
+Santiago and another one out of Buenos Aires three months later. We'll see what
+happens in between ;-).
+</p>
+
+<p>
+We're going to move out of our flat in Dublin - Its a nice place, but it needs
+some work, and the only way that work will happen is if the landlord has to rent
+it to some other sucker. We're going though all our stuff, sticking it in boxes,
+and getting it in storage. Its remarkable how stuff accumulates if you aren't
+moving all the time.
+</p>
+
+<p>
+We've bought a tent, thanks to <a href="https://www.facebook.com/wade.david">Dave</a>. Its very nice, and weighs about nothing. We hauled it down to Galtymore, <a href="https://plus.google.com/photos/102479403334301156799/albums/5804324042094533681">(see photos)</a> where we froze to death. Worrying. It was well below freezing though.
+</p>
+
+<p>
+We've started packing stuff for the trip. Long long lists. The <a href="http://www.urbandictionary.com/define.php?term=yak%20shaving">yak shaving</a> goes on forever. We've spent tons of time on the internet, looking at photos and blogs and reports. This is why we have started this thingo. Perhaps we'll be a warning to others.
+</p>
+
+<p>Currently we're down to a week and a bit before going. Doesn't feel like a
+long time...</p>
+
+
+
+
+
+
+</p>
+  <p> <a href="/first-post.html#disqus_thread">comment<a></p>
+
+
+  <h2><span>03 Nov 2012</span> &raquo; <a href="/first-aid.html">first aid</a></h2>
+  <p><p>
+
+Among the unnerving thing about this trip is the first aid kits. We've both done
+lots of walking, and we've carried a first aid kit for much of that. However,
+south america ups the ante with this stuff. we've bothgotten a spray of
+vaccines, and we've spent time buying yet more stuff for first aid. There's
+something weird about standing in the tiny tiny first aid section of boots,
+going "where are your eye patches? or your sutures? How am I going to keep
+myself alive with hair products?" Al least its not a <a href="http://www.youtube.com/watch?v=g3Zy0o5z1_c">this level</a> yet.
+</p>
+
+</p>
+  <p> <a href="/first-aid.html#disqus_thread">comment<a></p>
+
+
+</div>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36083946-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
