@@ -4,13 +4,41 @@
   <title>Laura and Pete's Travel blog</title>
   <link href="http://nuttall.im/chile/"/>
   <link type="application/atom+xml" rel="self" href="http://nuttall.im/chile//atom.xml"/>
-  <updated>2013-01-19T00:09:14+00:00</updated>
+  <updated>2013-01-19T04:02:27+00:00</updated>
   <id>http://nuttall.im/chile/</id>
   <author>
     <name>Pete and Laura's travel blog</name>
     <email>psn@nuttall.im</email>
   </author>
 
+  
+  <entry>
+    <id>http://nuttall.im/chile//el-chalten</id>
+    <link type="text/html" rel="alternate" href="http://nuttall.im/chile//el-chalten.html"/>
+    <title>El Chalten</title>
+    <updated>2013-01-19T00:00:00+00:00</updated>
+    <author>
+      <name>Pete and Laura Nuttall</name>
+      <uri>http://nuttall.im/</uri>
+    </author>
+    <content type="html">&lt;p&gt; Laura thinks we should give a general update, so here goes. We flew
+from Bariloche to El Calafate where we saw the glacier. The only other
+thing was that the airline pretty much trashed Laura's bag. The first thing
+she saw was a nut bar circling the belt. Oh dear, said Pooh.  &lt;/p&gt;
+
+&lt;p&gt; Since then, we took the bus though the patagonian steppe to El
+Chalten. We think this town is fantastic. From the bus station, we
+had a view of Cerro Torre and Mount Fitz Roy. The sky is blue. The
+sun is shining. Its not even windy. We have been very fortunate with
+the weather.  &lt;/p&gt;
+
+&lt;p&gt; So far, we have had a day's walking up to Laguna Torre and a day's
+climbing. Both have been excellent. Sadly, the internet is not so no
+photos. Tomorrow, we hare off trekking around Mount Fitz Roy. &lt;/p&gt;
+
+
+</content>
+  </entry>
   
   <entry>
     <id>http://nuttall.im/chile//nahuel-huapi-traverse</id>
