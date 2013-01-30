@@ -4,13 +4,54 @@
   <title>Laura and Pete's Travel blog</title>
   <link href="http://nuttall.im/chile/"/>
   <link type="application/atom+xml" rel="self" href="http://nuttall.im/chile//atom.xml"/>
-  <updated>2013-01-23T22:07:56+00:00</updated>
+  <updated>2013-01-28T23:12:27+00:00</updated>
   <id>http://nuttall.im/chile/</id>
   <author>
     <name>Pete and Laura's travel blog</name>
     <email>psn@nuttall.im</email>
   </author>
 
+  
+  <entry>
+    <id>http://nuttall.im/chile//punta-punta</id>
+    <link type="text/html" rel="alternate" href="http://nuttall.im/chile//punta-punta.html"/>
+    <title>Punta Arenas</title>
+    <updated>2013-01-28T00:00:00+00:00</updated>
+    <author>
+      <name>Pete and Laura Nuttall</name>
+      <uri>http://nuttall.im/</uri>
+    </author>
+    <content type="html">&lt;p&gt;
+We are at the far end of the Americas. Cabo Froward, the end of the landmass (Cape Horn
+is an island), is not that far away. Punta Arenas reminds us of Inverness. Also
+the whole place swarms with Chilean squaddies. War with Argentina? Penguin
+uprising? We shall let you know.
+
+&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <id>http://nuttall.im/chile//el-chalten</id>
+    <link type="text/html" rel="alternate" href="http://nuttall.im/chile//el-chalten.html"/>
+    <title>Another quick update</title>
+    <updated>2013-01-23T00:00:00+00:00</updated>
+    <author>
+      <name>Pete and Laura Nuttall</name>
+      <uri>http://nuttall.im/</uri>
+    </author>
+    <content type="html">&lt;div id=&quot;photo&quot;&gt;
+&lt;a href=&quot;https://picasaweb.google.com/lh/photo/ZWoZ34HxggHcKR7dPolGMNMTjNZETYmyPJy0liipFm0?feat=embedwebsite&quot;&gt;&lt;img
+  src=&quot;https://lh4.googleusercontent.com/-AJpbiBREbq8/UQBV2ca6PYI/AAAAAAAAKdg/CoVwqGhSvGM/s400/P1070232.JPG&quot;
+  height=&quot;300&quot; width=&quot;400&quot; /&gt;&lt;/a&gt;
+ &lt;/div&gt;
+
+&lt;p&gt;
+We are still in El Chalten. We have been trekking around Mount Fitz Roy for the
+last few days, and then we went kayaking. Tomorrow we go ice climbing. The
+internet has about 14% packet loss, so you only get one photo. Sorry! &lt;/p&gt;
+</content>
+  </entry>
   
   <entry>
     <id>http://nuttall.im/chile//el-chalten</id>
