@@ -2,7 +2,7 @@
 layout: nil
 ---
 <?xml version="1.0"?>
-<feed xmlns="https://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom">
 
   <title>Laura and Pete's Travel blog</title>
   <link href="https://nuttall.im/"/>
