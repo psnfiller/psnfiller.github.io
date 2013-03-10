@@ -15,7 +15,7 @@ layout: nil
   </author>
 
   {% for post in site.posts %}
-  {% if post.category == 'tech' %}
+  {% if post.category != 'tech' %}
   <entry>
     <id>https://nuttall.im/{{ post.id }}</id>
     <link type="text/html" rel="alternate" href="https://nuttall.im/{{ post.url }}"/>
