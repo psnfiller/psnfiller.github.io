@@ -9,7 +9,6 @@ ul.address li { list-style-type: none; padding-left: 0px; text-indent: 0px; }
 h1,h2,h3 { font-variant: small-caps; font-weight: normal; margin-top: 1.5em;}
 h1 { font-size: 200%; margin-top: 0em;}
 h2 {font-size: 130%; }
-p { font-size: 0.9em; }
 p.email { display: inline; font-family: sans-serif; }
 big { font-weight: bold; font-size: 1.1em;  }
 #edu table {border-width: 1px; border-style: solid; }
