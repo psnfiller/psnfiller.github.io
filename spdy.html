@@ -1,0 +1,25 @@
+<p>I started supporting spdy this morning. It as pretty simple. I downloaded the
+most rencent version of openssl (to pick up NPN) and the ngnix source and a
+patch. Applied patch, built a static ngnix binary, and off we went. Only
+problem was fiddling with the init script refer to the new binary and the config
+in /etc. I also cleaned up a few bits of the ngnix config. <a
+href="http://spdycheck.org/#nuttall.im">Spdy check</a> is happy.</p>
+
+<p>Oh, can you spot why this extrct from debian's /etc/init.d/ngnix might not be
+ideal?</p>
+
+<pre>
+set -e
+  restart|force-reload)
+        echo -n "Restarting $DESC: "
+        start-stop-daemon --stop --quiet --pidfile \
+                /var/run/$NAME.pid --exec $DAEMON || true
+        sleep 1
+        test_nginx_config
+        start-stop-daemon --start --quiet --pidfile \
+                /var/run/$NAME.pid --exec $DAEMON -- $DAEMON_OPTS || true
+        echo "$NAME."
+</pre>
+
+
+
