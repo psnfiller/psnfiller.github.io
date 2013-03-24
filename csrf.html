@@ -6,140 +6,113 @@ title: logging out
 <p> At work there is a web single sign on system. And it has the feature
 that visiting a single page will log you out. This leads to people
 setting up comedy redirects. I may have been one of these people. The
-folks who look after it claim that this is working as expected. The
-google app security reward program explicitly calls out logout CSRF
-https://www.google.com/about/appsecurity/reward-program/ this as
-"Difficult, long-term browser-level improvements are required to truly
-eliminate this possibility.".  </p>
+problem is called logout CSRF - and the folks who look after the system
+say its working as expected. The  <a
+  href="https://www.google.com/about/appsecurity/reward-program/">google
+  app security reward program</a> explicitly calls
+out logout CSRF
+this as "Difficult, long-term browser-level improvements are required
+to truly eliminate this possibility.".  </p>
 
 <p>
-Why is this? The attack is called CSRF. The user visits a malicous
-website. The source on that website refers to thegood website in some
-way. the user's browser run the html and javscript ("runs" is the wrong
-word here, I think). browser sends GET and POST requests to the good
-website. the good website thinks that the user is asking the browser to
-send the requests. bad things happen.
+CSRF is a simple attack. The user visits a malicious website. The source for that
+website refers to a good website in either html or in JavaScript. The user's
+browser runs the code and sends GET or POST requests to the good website. The
+good website assumes the user is telling the browser to send the requests - for
+example to transfer the money. This is the <a
+  href="https://en.wikipedia.org/wiki/Confused_deputy_problem">Confused deputy
+  problem</a>.
 </p>
 
 <p>
-This is a pretty well understood attack now. Most sites has defenses,
-solely leaving the logout hole.  https://nuttall.im/wut-plus-plus.html
+This is a pretty well understood attack now. Most sites have defences, but the
+logout hole lingers. Here's a example <a href="
+  https://nuttall.im/wut-plus-plus.html">Don't click it!</a></p>
+
+<p>I thought that this would be a fun thing to explore one weekend.
+I threw together a pretty simple login system in python and <a href="http://webpy.org/">web.py</a>. Quick
+aside: web.py is lovely. The user logs in, and gets a cookie. For every user
+action, the cookie is sent by the user browser, and validated. There's no server
+side session stuff at all. When the user logs out, the cookie is deleted. The code is ....
+
+<p>Quick note on the cookie contents. The cookie contains the username,
+the timestamp the cookie was generated at, the cookie expiry time,
+and a <a
+  href="https://en.wikipedia.org/wiki/Hash-based_message_authentication_code">HMAC</a>.
+  If a attacker changes any of the data in the cookie, the hamc is
+  invalid. The attacker does not know the key for the HMAC, so can not generate
+  a valid cookie.
 </p>
 
 <p>
+Why store all the information  client side? The main reason is dos protection.
 
-I threw together a pretty simple login system in python and web.py. Quick
-aside: web.py is lovely. First python web framework which felt sane. All
-the state is on a cookie on the client side. The sysadmin in me likes
-client side state. I freak out when people talk about systems where any
-user action triggers a db read....
+</p>
+
+<p>Anyway, there are CRSF attacks in both the login and logout pages. For
+logout, the evil site loads the logout url in a iframe. For login, the evil site
+has javascript which submits the login form with a different username and
+password.Code for both is in ....
 </p>
 
 <p>
-
-The cookie is pretty simple. Username, timestamp, exipiry, hmac. There's
-nothing a user wouldn't know in their cookie. The hmac prevents tampering
-with the cookie's contents. Its probable there is a timing attack with
-the hmac. I might try and find that one day.
-</p>
-
-<p>
-
-On login (there is no checking of passwords - any will do) the server
-sets a cookie. On each page, it checks to see if the cookie has expired
-or been tampered with. On logout, it clears the cookie. Both login and
-logout have CSRF holes.
-</p>
-
-<p>
-
-For logout, the evil site loads the logout url in a iframe. the browser
-triggers a GET, and gets the Set cookie l=header to remove the cookie
-in the response. The iframe can be hidden. See the demo.
-</p>
-
-<p>
-
-For login, the evil site has javascript submit a form with the evil
-username and password.  the user opens the evil site, runs the javascript,
-nd sends a POST request to the good site. The user gets back a cookie
-with the evil username and password. at this point, any interaction the
-user has with the good site is now as the bad user. This might be bad.
-</p>
-
-<p>
-
-Is possible to imagine a url or form that it would be bad for a evil
-site to do with the good site's cookies. ...
-</p>
-
-<p>
-
-Anyway, thats CRSF. The defense is pretty well known - for every form
+The defence  against CSRF is pretty well known - for every form
 or url, include a hidden value that the attacker can't guess. Check
-for the hidden value on every action. if its missing or corrupt, reject
+for the hidden value on every action. If its missing or corrupt, reject
 the action.
 </p>
 
 <p>
-
-I ended up using the user's IP, a timestmp, and a expiry time and a
-hmac. The evil site could scrape the good site for hidden values....
+I ended up using the user's IP, a timestamp, and a expiry time and a
+hmac. The timestamp and expiry protect against replay attacks. The user's ip
+protects against a attacker scraping the login form, getting a valid token, and
+using it for the aattck. nce again, the only server side state is the hmac key. </p>
 </p>
 
-<p>
 
-Once again, the only server side state is the N bits of the hmac key.
-
-okay, so we can change the logout system to work in the same way. That
-gaurds against the trival crsf gmail has.
-</p>
+<p>Clearly, all of this has to happen over https. Otherwise a passive attacker
+can sniff the password or the cookie, and do what he wants. https also protects
+against a active attacker from changing the requests or responses.</p>
 
 <p>
-
-Why doesn't google do this? The answer is in cookie bombarment and
+Why doesn't Google protect against logout csrf? The answer is in cookie bombardment and
 forcing. They worry about the case where there is a active man in the
-middle attacking the user. The MitM can inject into http requests, but not
-https requests. https is designed to keep working in the face of a active
-attacker. imagine the case where the user is using good site completely
-on https, but also visiting other sites in another tab over http.
-</p>
+middle attacking the user, and the user is doing some other browsing while
+logged into gmail. The MitM can inject or modify http requests and
+responses, but not gmail's https requests.  When the user requests a different
+site, the attacker can 302 them to the http version of gmail, then can intercept
+the request for gmail, then can reply with a cookie-clearing header. Volia, the
+user is logged out. </p>
+
+<p>Cookies have grown two  features over the years to protect against different
+attacks. secure and httpOnly. A HttpOnly cookie is only sent over the wire in a
+http or https request, and can;t be accessed by javascript. A secure cookie is
+only sent to a https url. However, a http page can set a cookie with the same
+name as a secure cookie, and therefore overwrite the secure cookie. This is a
+bug, in my opinion, and it lets a active attacker force a logout of a https only
+site. </p>
 
 <p>
-
-The attcker can replace the response to a http request for some completely
-unrelated site with a 302 to http://goodsite.com. The user then does a
-get request for goodsite over http, and the attacker can then inject
-set-hcookies headers into the response. Browsers limit the number of
-cookies a site can set, and when the site hits that limit, they start
-discarding older cookies. Chrome has a limit of 100 cookies per site. 100
-set cookie headers, and the user is logged out.  This attack is called
-cookie forcing.
-
-</p>
-
-<p>
-
 The solution to this, in my mind, is HSTS. This is a header to tell the
-broswer that all traffic for a domain is over https. This prevents the
-MitM from injecting a request over http, and therefor from injecting
+browser that all traffic for a domain is over https. This prevents the
+MitM from injecting a request over http, and therefore from injecting
 cookies. Wee.
-
 </p>
 
 <p>
 The next attack is cookie bombaredment. The MitM starts sending lots of
 cookies for unrelated sites. the browser's global limit on the number of
 cookies it can store is reached. the browser starts evicting cookies. It
-evicts the login cookie, in effect logging the user out.
-
+evicts the login cookie, logging the user out.
 </p>
 
 <p>
 Its hard to tell how big a deal this is. The attacker can issue up to 20
-redirects between different domains for each user http click. for each of
+redirects between different domains for each user http click. For each of
 those domains, he can set 150 cookies with 4k of data each, which is 12M
-of data. I haven't worked ut what the limit is. My Cookies file is 700k.
-
+of data. I haven't worked out what the limit is. My Cookies file is 700k.
 </p>
 
+<p>Anyway, at this point we've gone past a attacker tricking the user to click
+on a url to a active attacker spraying cookies around. I figure the logout hole
+should be closed a bit more than it is.</p>
