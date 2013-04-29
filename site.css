@@ -39,7 +39,15 @@
   #nav ul li {
     list-style: none;
     display: inline;
+    border-left: 1px solid #000;
   }
+  #nav  ul li.first {
+     margin-left: 0;
+      border-left: none;
+       list-style: none;
+        display: inline;
+      }
+
   #nav {
     padding: 5px;
     margin-bottom: 25px;
