@@ -40,12 +40,15 @@
     list-style: none;
     display: inline;
   }
-
-  #nav h3 {
+  #nav {
+    padding: 5px;
+    border: 1px solid #000;
+    margin-bottom: 25px;
     text-align: center;
     font-family: 'Droid Sans', arial, serif;
     font-weight: normal;
-  }
+          }
+
 
 
 
