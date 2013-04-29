@@ -33,8 +33,13 @@
     font-family:monospace, 'Droid Sans';
     font-size: small;
   }
-  #nav {
+  #nav ul {
     display: inline;
-    list-style: none;
   }
+  #nav li {
+    list-style: none;
+    display: inline;
+  }
+
+
 

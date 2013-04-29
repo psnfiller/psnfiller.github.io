@@ -35,5 +35,6 @@
   }
   #nav {
     display: inline;
+    list-style: none;
   }
 
