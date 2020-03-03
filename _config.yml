@@ -1,2 +1,7 @@
 permalink: /:title.html
 comments: true
+lsi: false
+safe: true
+source: https://github.com/psnfiller/psnfiller.github.io
+incremental: false
+
