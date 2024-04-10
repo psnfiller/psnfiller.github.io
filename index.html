@@ -1,15 +1,5 @@
----
-layout: index
-title: Chile!
-feed: atom.xml
----
-<div id="home">
-{% for post in site.posts limit: 10 %}
-  {% if post.category != 'tech' %}
-  <h2><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></h2>
-  <p>{{ post.content }}</p>
-  <p> <a href="{{ post.url }}#disqus_thread">comment<a></p>
-  {% endif %}
-
-{% endfor %}
-</div>
+<html>
+  <body>
+    <h1>Woodenshoes is a AI powered Blockchain for machine diagnostics</h1>
+  </body>
+</html>
